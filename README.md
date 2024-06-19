@@ -14,8 +14,8 @@
 
 ## 官网
 
-- https://qiaoqiaoyun.com
-- https://help.qiaoqiaoyun.com
+- 产品官网:https://qiaoqiaoyun.com
+- [免费注册使用](https://app.qiaoqiaoyun.com)
 
 
 
