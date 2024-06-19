@@ -16,7 +16,7 @@
 
 - 官网地址:  https://qiaoqiaoyun.com
 - [免费注册使用](https://app.qiaoqiaoyun.com)
-- 规划： 规划2024下半年，开放免费版本下载
+- 规划： 预计2024下半年，开放免费版本下载
 
 
 
