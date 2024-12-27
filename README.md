@@ -73,6 +73,13 @@
 
 ![](https://oscimg.oschina.net/oscnet/up-68874cda64df7e92f192c7018745f2aa1c4.png)
 
+
+## 移动端
+> APP、H5、钉钉移动端随时随地可操作
+
+![](https://oscimg.oschina.net/oscnet/up-68eb5541d5f0d9906c059f32851e877fe6e.png)
+
+
 ## 大屏设计器
 > 可视化数据大屏，一站式数据可视化展示平台，零门槛打造出专业大屏数据展示。
 
@@ -81,11 +88,4 @@
 - 各种图表类型、表格、地图等组件，满足日常需求
 
 ![](https://oscimg.oschina.net/oscnet/up-6504fc16d2d577c18418c6cc2fec488bdaf.png)
-
-## 移动端
-> APP、H5、钉钉移动端随时随地可操作
-
-![](https://oscimg.oschina.net/oscnet/up-68eb5541d5f0d9906c059f32851e877fe6e.png)
-
-
 
