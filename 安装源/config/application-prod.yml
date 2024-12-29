@@ -148,7 +148,7 @@ spring:
   #mongodb
   data:
     mongodb:
-      uri: mongodb://admin:123456@127.0.0.1:27017/jeecg
+      uri: mongodb://admin:123456@127.0.0.1:27017/qiaoqiaoyun
       print: true
       slowQuery: true
       slowTime: 1000
