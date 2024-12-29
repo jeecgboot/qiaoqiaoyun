@@ -49,7 +49,7 @@
 
 ### 3.2 修改mongo数据库配置
 
-![](https://oscimg.oschina.net/oscnet/up-a67d0faa6a9b2e43d734ae52022556781bf.png)
+![](https://oscimg.oschina.net/oscnet/up-3b7087b3524186977736ee0139c86109db4.png)
 
 ### 3.3 修改redis配置
 
