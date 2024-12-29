@@ -41,7 +41,7 @@
 
 ###  三、启动项目配置文件修改
 
-需要修改`mysql`和`mogodb`的数据库配置、redis配置、云存储、阿里大鱼短信配置，配置文件在 ` config/application-prod.yml`。
+请修改文件 ` config/application-prod.yml`，设置`mysql`和`mogodb`的数据库、redis、云存储、阿里大鱼短信 等配置。
 
 ### 3.1 修改mysql数据库配置
 
@@ -127,13 +127,9 @@ server {
 
 #####  4.2.3 访问系统
 
-- 登录账号
+- 登录系统( 默认账号admin,密码123456)
 
  访问地址：http://localhost
-
- 默认账号admin, 密码123456
-
-- 登录页面效果
 
 ![](https://oscimg.oschina.net/oscnet/up-59b983dedd8c43f7ea5b784b1584e0a6704.png)
 
