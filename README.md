@@ -1,94 +1,142 @@
-# 敲敲云零代码-免费版
+## 免费敲敲云零代码
+
+敲敲云是一个APaaS零代码平台，帮助企业快速搭建个性化业务应用！用户无需任何代码，即可搭建出符合业务需求的个性化应用。敲敲云拥有完善的应用搭建能力、表单引擎、流程引擎、仪表盘引擎，可满足企业的正常需求。
+
+ **敲敲云可以做什么？**
+ 
+ - 1.用它采集数据？像我们一样挂一个工单，收集客户询价信息，用于表单数据采集系统
+ - 2.用它解决纸质化办公？原来用Excel记录数据，你可以快速搭建一个系统，填写数据并快速出统计报表
+ - 3.用它配置业务系统？例如：财务系统、CRM、进销存、OA、MIS系统等
+ - 4.用它配置应用模板？你可以配置CRM、进销存等应用，将应用模板导出卖给他人，支持快速导入
 
 
-敲敲云是一个 APaaS 零代码平台，帮助企业快速搭建个性化业务应用！用户无需任何代码，即可搭建出符合业务需求的个性化应用。
-- 敲敲云拥有完善的应用搭建能力、表单引擎、流程引擎、仪表盘引擎，可满足企业的正常需求。
-- 平台内的自动化工作流还可以实现审批、填写等控制流程和业务自动化。
-- 如果用户企业使用钉钉或企业微信，也可以将平台内搭建的应用直接对接到工作台上。
+### 安装源下载
+
+下载地址： https://github.com/jeecgboot/qiaoqiaoyun
+
+![](https://oscimg.oschina.net/oscnet/up-af24689f19386ba17ca0d1ab3c108ccc9dc.png)
+
+## 快速安装启动文档
+
+###  一、基础软件安装
 
 
-## 敲敲云可以做什么？
-
-* 1.你可以用它采集数据？像我们一样挂一个工单，收集客户询价登记信息
-* 2.你可以用它解决纸质化办公问题？原来用Excel记录数据，你可以快速搭建一个系统，填写数据并快速出统计报表
-* 3.你可以用它配置任何你需要的业务系统？例如：财务系统、CRM、进销存、OA、MIS系统等
-* 4.你可以用它配置搭建应用售卖模板？比如你可以配置一个CRM、进销存应用，将应用导出卖给需要的人，支持快速导入
+* mysql 5.7+
+* mogodb 6.0.2+
+* redis
+* jdk8/17
 
 
-## 开源版本有什么功能？
-
-* 1.应用搭建功能，能够创建应用、表单和门户仪表盘、进行数据存储和数据统计分析
-* 2.类似金数据的数据采集，表单填报（表单能力）
-* 3.搭建门户和仪表盘能力
-* 4.可以免费使用
+###  二、数据库创建
 
 
-## 开源版本与商业版区别？
+- 3.1 使用mysql数据库，执行初始化脚本qiaoqiaoyun.sql，会自动创建数据库qiaoqiaoyun
 
-* 1.无应用权限管理、无租户管理、没有流程和聊天功能
-* 2.无应用模板和应用备份等功能
-* 3.不支持企业微信和钉钉对接
-* 4.不允许创建新租户，默认一个租户
-* 5.不允许创建新用户，默认一个用户admin
-* 6.无用户、角色、部门等管理功能
+![](https://oscimg.oschina.net/oscnet/up-7500e8431957f58607cb39bf59530e90b17.png)
 
 
-## 产品介绍
+- 3.2 在mogodb中创建数据库 qiaoqiaoyun即可，无需执行初始化SQL
 
-官网地址:  https://qiaoqiaoyun.com
+![](https://oscimg.oschina.net/oscnet/up-fc0b424b9929b19d2aa2cf860d11e9202e8.png)
 
-下面我们来看一下，敲敲云都有哪些功能吧
+###  三、启动项目配置文件修改
 
-## 表单引擎
-> 可视化拖拽设计，控件丰富轻松满足日常业务需求，不需要任何的专业知识拖动组件，像搭积木一样，轻松完成表单的创建，一分钟开始数据收集的工作。
+需要修改`mysql`和`mogodb`的数据库配置、redis配置、云存储、阿里大鱼短信配置，配置文件在 ` config/application-prod.yml`。
 
-- 40多种丰富表单控件
+### 3.1 修改mysql数据库配置
 
-![](https://oscimg.oschina.net/oscnet/up-655d3f41e89000fecb55693b64ea155596a.png)
+![](https://oscimg.oschina.net/oscnet/up-73ab2d3b1ebd4de392b6c91c2e28678747f.png)
 
-- 表单引擎拥有丰富布的局方式 
+### 3.2 修改mongo数据库配置
 
-![](https://oscimg.oschina.net/oscnet/up-60ed5b69aa79649bd46682e00d3f3faac36.png)
+![](https://oscimg.oschina.net/oscnet/up-a67d0faa6a9b2e43d734ae52022556781bf.png)
+
+### 3.3 修改redis配置
+
+![](https://oscimg.oschina.net/oscnet/up-40dc478d7c8c93f8debf9c44a5e176efd5a.png)
+
+### 3.4 阿里云存储配置
+
+![](https://oscimg.oschina.net/oscnet/up-74f1940f9ac3cea390c8aa4b79a48e0c566.png)
+
+### 4.5 阿里大鱼短信配置
+
+![](https://oscimg.oschina.net/oscnet/up-5f04ead1b63455a351f7d813f5b3add067a.png)
+
+###  四、项目部署与启动
+
+#### 4.1 启动后台JAVA服务
+- 启动命令
+```
+java -javaagent:qiaoqiaoyun-start-2.0.jar="-pwd 5eez3Vqil97n" -jar qiaoqiaoyun-start-2.0.jar
+```
+
+- 启动成功界面
+
+![](https://oscimg.oschina.net/oscnet/up-77cf956d12dbd68f679e42b2914c099ce26.png)
+
+![](https://oscimg.oschina.net/oscnet/up-0ced8f8c6fe0284ca3a300bc210eeca8947.png)
+
+#### 4.2 前端采用nginx部署
+
+#####   4.2.1 Nginx部署
+将dist.zip解压通过nginx访问
+
+```
+upstream localhost {
+  server 127.0.0.1:80;
+ }
+server {
+    listen       80;
+    server_name  localhost;
+    #前端dist.zip解压到这个目录
+    root      /srv/www/project;
+
+    location / {
+         # 用于配合 browserHistory使用
+         try_files $uri $uri/ /index.html;
+    }
+
+    #映射后台接口地址
+    location  /qiaoqiaoyun/ {
+        proxy_pass         http://127.0.0.1:8080/;
+        proxy_redirect off;
+        proxy_set_header  Host             $host;
+        proxy_set_header  X-Real-IP        $remote_addr;
+        set $my_proxy_add_x_forwarded_for $proxy_add_x_forwarded_for;
+        if ($proxy_add_x_forwarded_for ~* "127.0.0.1"){
+          set $my_proxy_add_x_forwarded_for $remote_addr;
+        }
+        proxy_set_header   X-Forwarded-For $my_proxy_add_x_forwarded_for;
+    }
+
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+        root   html;
+    }
+}
+```
 
 
-## 流程引擎
-> 可视化流程拖拽设计、更加简单，更符合中国国情的流程引擎，任意驳回、委派、跳转。可实现审批、填写、数据处理等流程审批和业务处理，自动流转。
+#####  4.2.2 配置后端接口
+ 修改dist.zip解压后的文件_app.config.js
 
-- 设计界面美观，用户使用体验流畅
-![](https://oscimg.oschina.net/oscnet/up-a867e27f5463bc79a273846be957770fac8.png)
+![](https://oscimg.oschina.net/oscnet/up-738bdbc9a18937d654698fdbbc91624a300.png)
 
-- 25种丰富的流程节点
-![](https://oscimg.oschina.net/oscnet/up-8068a15d1c0e07dd6982cbacda66bcdc1be.png)
+![](https://oscimg.oschina.net/oscnet/up-bbcf58c69710cc69c5182578e048f9c29e2.png)
 
-- 节点配置丰富，可设置不同审批人，权限和高级配置
-![](https://oscimg.oschina.net/oscnet/up-5d6f0aa7275eba273a2777218cf3625385f.png)
+#####  4.2.3 访问系统
 
-## 仪表盘
-> 实现了多种图表数据可视化的展现，图表、按钮、富文本、轮播图、嵌入URL皆可配置
+- 登录账号
 
-![](https://oscimg.oschina.net/oscnet/up-9f3d63eb704abbfef09f5b5f933fa8e2ee7.png)
+ 访问地址：http://localhost
 
-- 设计界面
+ 默认账号admin, 密码123456
 
-![](https://oscimg.oschina.net/oscnet/up-c10284fe6a2c4cb48b6b173cd77d9ac211e.png)
+- 登录页面效果
 
-- 20多种丰富统计图表
+![](https://oscimg.oschina.net/oscnet/up-59b983dedd8c43f7ea5b784b1584e0a6704.png)
 
-![](https://oscimg.oschina.net/oscnet/up-68874cda64df7e92f192c7018745f2aa1c4.png)
+ - 进入平台效果
 
-
-## 移动端
-> APP、H5、钉钉移动端随时随地可操作
-
-![](https://oscimg.oschina.net/oscnet/up-68eb5541d5f0d9906c059f32851e877fe6e.png)
-
-
-## 大屏设计器
-> 可视化数据大屏，一站式数据可视化展示平台，零门槛打造出专业大屏数据展示。
-
-![](https://oscimg.oschina.net/oscnet/up-89ff108362b97e2fb27f0d39c7f52b5e4d6.png)
-
-- 各种图表类型、表格、地图等组件，满足日常需求
-
-![](https://oscimg.oschina.net/oscnet/up-6504fc16d2d577c18418c6cc2fec488bdaf.png)
-
+ ![](https://oscimg.oschina.net/oscnet/up-40655b7b552de38a6b2edaef2959f878466.png)
