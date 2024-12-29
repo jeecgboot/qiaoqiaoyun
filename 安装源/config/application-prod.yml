@@ -22,8 +22,8 @@ management:
 spring:
   servlet:
     multipart:
-      max-file-size: 10MB
-      max-request-size: 10MB
+      max-file-size: 20MB
+      max-request-size: 20MB
   mail:
     host: smtp.163.com
     username: jeecgos@163.com
@@ -97,7 +97,6 @@ spring:
   autoconfigure:
     exclude:
       - com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure
-      - org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration
   datasource:
     druid:
       stat-view-servlet:
@@ -212,11 +211,6 @@ jeecg:
         SMS_465391221:
         # 注册账号短信模板编码
         SMS_175430166:
-  # ElasticSearch 6设置
-  elasticsearch:
-    cluster-name: jeecg-ES
-    cluster-nodes: 192.168.1.188:9200
-    check-enabled: false
   # 表单设计器配置
   desform:
     # 主题颜色（仅支持 16进制颜色代码）
