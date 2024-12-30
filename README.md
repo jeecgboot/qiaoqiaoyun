@@ -12,7 +12,7 @@
 
 ### 安装源下载
 
-下载地址： https://github.com/jeecgboot/qiaoqiaoyun
+下载地址： https://gitee.com/jeecg/qiaoqiaoyun
 
 QQ交流群：967780549
 
