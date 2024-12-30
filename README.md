@@ -1,6 +1,6 @@
 ## 免费敲敲云零代码
 
-敲敲云是一个APaaS零代码平台，帮助企业快速搭建个性化业务应用！用户无需任何代码，即可搭建出符合业务需求的个性化应用。敲敲云拥有完善的应用搭建能力、表单引擎、流程引擎、仪表盘引擎，可满足企业的日常需求。
+敲敲云是一个APaaS零代码平台，帮助企业快速搭建个性化业务应用！用户无需任何代码，即可搭建出符合业务需求的个性化应用。敲敲云拥有完善的应用搭建能力、表单引擎、流程引擎、仪表盘引擎，可满足企业的正常需求。
 
  **敲敲云可以做什么？**
  
@@ -49,6 +49,7 @@
 
 ### 3.2 修改mongo数据库配置
 
+
 ![](https://oscimg.oschina.net/oscnet/up-3b7087b3524186977736ee0139c86109db4.png)
 
 ### 3.3 修改redis配置
@@ -66,6 +67,9 @@
 ###  四、项目部署与启动
 
 #### 4.1 启动后台JAVA服务
+> 先解压出`qiaoqiaoyun-start-2.0.jar`，注意qiaoqiaoyun-start-2.0.jar要与config在同一级目录
+![](https://oscimg.oschina.net/oscnet/up-d5adfe7788f79285a2c9025c0d2d2f6bd6c.png)
+
 - 启动命令
 ```
 java -javaagent:qiaoqiaoyun-start-2.0.jar="-pwd 5eez3Vqil97n" -jar qiaoqiaoyun-start-2.0.jar
@@ -80,7 +84,7 @@ java -javaagent:qiaoqiaoyun-start-2.0.jar="-pwd 5eez3Vqil97n" -jar qiaoqiaoyun-s
 #### 4.2 前端采用nginx部署
 
 #####   4.2.1 Nginx部署
-将dist.zip解压通过nginx访问
+将dist.zip的内容解压到目录，通过nginx访问
 
 ```
 server {
@@ -103,15 +107,19 @@ server {
 }
 ```
 
+**注意：** proxy_pass配置的后台地址，必须用具体IP，不能使用127.0.0.1或者localhost，不然验证码会404.
 
-#####  4.2.2 配置后端接口
+#####   4.2.2  前端解压效果图
+![](https://oscimg.oschina.net/oscnet/up-aeff064d6e2f31a18bc60279013fe4b7f54.png)
+
+#####  4.2.3 配置后端接口
  修改dist.zip解压后的文件_app.config.js
 
 ![](https://oscimg.oschina.net/oscnet/up-738bdbc9a18937d654698fdbbc91624a300.png)
 
 ![](https://oscimg.oschina.net/oscnet/up-bbcf58c69710cc69c5182578e048f9c29e2.png)
 
-#####  4.2.3 访问系统
+#####  4.2.4 访问系统
 
 - 登录系统( 默认账号admin,密码123456)
 
