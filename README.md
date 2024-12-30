@@ -76,7 +76,7 @@ QQ交流群：967780549
 
 - 启动命令
 ```
-java -javaagent:qiaoqiaoyun-start-2.0.jar="-pwd 5eez3Vqil97n" -jar qiaoqiaoyun-start-2.0.jar
+java -javaagent:qiaoqiaoyun-start-2.0.jar="-pwd 5eez3Vqil97n" -jar -Dfile.encoding=UTF-8 qiaoqiaoyun-start-2.0.jar
 ```
 
 - 启动成功界面
