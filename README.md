@@ -14,6 +14,8 @@
 
 下载地址： https://github.com/jeecgboot/qiaoqiaoyun
 
+QQ交流群：967780549
+
 ![](https://oscimg.oschina.net/oscnet/up-af24689f19386ba17ca0d1ab3c108ccc9dc.png)
 
 ## 快速安装启动文档
