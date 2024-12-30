@@ -83,37 +83,23 @@ java -javaagent:qiaoqiaoyun-start-2.0.jar="-pwd 5eez3Vqil97n" -jar qiaoqiaoyun-s
 将dist.zip解压通过nginx访问
 
 ```
-upstream localhost {
-  server 127.0.0.1:80;
- }
 server {
     listen       80;
+    listen  [::]:80;
     server_name  localhost;
-    #前端dist.zip解压到这个目录
-    root      /srv/www/project;
 
     location / {
-         # 用于配合 browserHistory使用
-         try_files $uri $uri/ /index.html;
+        try_files $uri $uri/ /index.html;
+        #前端dist解压到此目录
+        root   /usr/share/nginx/html;
+        index  index.html index.htm;
     }
 
     #映射后台接口地址
-    location  /qiaoqiaoyun/ {
-        proxy_pass         http://127.0.0.1:8080/;
-        proxy_redirect off;
-        proxy_set_header  Host             $host;
-        proxy_set_header  X-Real-IP        $remote_addr;
-        set $my_proxy_add_x_forwarded_for $proxy_add_x_forwarded_for;
-        if ($proxy_add_x_forwarded_for ~* "127.0.0.1"){
-          set $my_proxy_add_x_forwarded_for $remote_addr;
-        }
-        proxy_set_header   X-Forwarded-For $my_proxy_add_x_forwarded_for;
+    location  /qiaoqiaoyun {
+        proxy_pass         http://192.168.1.11:8080/;
     }
 
-    error_page   500 502 503 504  /50x.html;
-    location = /50x.html {
-        root   html;
-    }
 }
 ```
 
