@@ -14,9 +14,15 @@
 
 下载地址： https://gitee.com/jeecg/qiaoqiaoyun
 
-QQ交流群：967780549
-
 ![](https://oscimg.oschina.net/oscnet/up-af24689f19386ba17ca0d1ab3c108ccc9dc.png)
+
+
+### 技术交流
+
+- QQ交流群：967780549
+- 用户手册：https://help.qiaoqiaoyun.com
+- 视频教程：https://qiaoqiaoyun.com/learnIndex
+
 
 ## 快速安装启动文档
 
