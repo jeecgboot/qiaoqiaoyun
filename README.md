@@ -60,14 +60,16 @@
 
 ![](https://oscimg.oschina.net/oscnet/up-74f1940f9ac3cea390c8aa4b79a48e0c566.png)
 
-### 4.5 阿里大鱼短信配置
+### 3.5 阿里大鱼短信配置
 
 ![](https://oscimg.oschina.net/oscnet/up-5f04ead1b63455a351f7d813f5b3add067a.png)
 
 ###  四、项目部署与启动
 
 #### 4.1 启动后台JAVA服务
+
 > 先解压出`qiaoqiaoyun-start-2.0.jar`，注意qiaoqiaoyun-start-2.0.jar要与config在同一级目录
+
 ![](https://oscimg.oschina.net/oscnet/up-d5adfe7788f79285a2c9025c0d2d2f6bd6c.png)
 
 - 启动命令
@@ -110,6 +112,7 @@ server {
 **注意：** proxy_pass配置的后台地址，必须用具体IP，不能使用127.0.0.1或者localhost，不然验证码会404.
 
 #####   4.2.2  前端解压效果图
+
 ![](https://oscimg.oschina.net/oscnet/up-aeff064d6e2f31a18bc60279013fe4b7f54.png)
 
 #####  4.2.3 配置后端接口
