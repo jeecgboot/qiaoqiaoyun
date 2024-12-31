@@ -1,4 +1,4 @@
-## 免费敲敲云零代码
+## 敲敲云零代码
 
 敲敲云是一款免费的零代码平台，帮助企业快速搭建个性化业务应用！用户无需任何代码，即可搭建出符合业务需求的个性化应用。敲敲云拥有完善的应用搭建能力、表单引擎、流程引擎、仪表盘引擎，可满足企业的正常需求。
 
@@ -12,11 +12,13 @@
 
 ### 部署包下载
 
-![](https://oscimg.oschina.net/oscnet/up-af24689f19386ba17ca0d1ab3c108ccc9dc.png)
 
 - 下载地址： https://gitee.com/jeecg/qiaoqiaoyun
 
 - 快速搭建启动：https://help.qiaoqiaoyun.com/open/InstallStart.html
+
+![](https://oscimg.oschina.net/oscnet/up-af24689f19386ba17ca0d1ab3c108ccc9dc.png)
+
 
 ### 技术交流
 
