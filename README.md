@@ -10,134 +10,32 @@
  - 4.用它配置应用模板？你可以配置CRM、进销存等应用，将应用模板导出卖给他人，支持快速导入
 
 
-### 安装源下载
-
-下载地址： https://gitee.com/jeecg/qiaoqiaoyun
+### 部署包下载
 
 ![](https://oscimg.oschina.net/oscnet/up-af24689f19386ba17ca0d1ab3c108ccc9dc.png)
 
+- 下载地址： https://gitee.com/jeecg/qiaoqiaoyun
+
+- 快速搭建启动：https://help.qiaoqiaoyun.com/open/InstallStart.html
 
 ### 技术交流
 
 - QQ交流群：967780549
 - 用户手册：https://help.qiaoqiaoyun.com
 - 视频教程：https://qiaoqiaoyun.com/learnIndex
+- 官方网站： https://www.qiaoqiaoyun.com
+- 在线体验： https://app.qiaoqiaoyun.com
 
 
-## 快速安装启动文档
+### 开源版有什么功能？
 
-###  一、基础软件安装
-
-
-* mysql 5.7+
-* mogodb 6.0.2+
-* redis
-* jdk8/17
-
-
-###  二、数据库创建
-
-
-- 3.1 使用mysql数据库，执行初始化脚本qiaoqiaoyun.sql，会自动创建数据库qiaoqiaoyun
-
-![](https://oscimg.oschina.net/oscnet/up-7500e8431957f58607cb39bf59530e90b17.png)
-
-
-- 3.2 在mogodb中创建数据库 qiaoqiaoyun即可，无需执行初始化SQL
-
-![](https://oscimg.oschina.net/oscnet/up-fc0b424b9929b19d2aa2cf860d11e9202e8.png)
-
-###  三、启动项目配置文件修改
-
-请修改文件 ` config/application-prod.yml`，设置`mysql`和`mogodb`的数据库、redis、云存储、阿里大鱼短信 等配置。
-
-### 3.1 修改mysql数据库配置
-
-![](https://oscimg.oschina.net/oscnet/up-73ab2d3b1ebd4de392b6c91c2e28678747f.png)
-
-### 3.2 修改mongo数据库配置
-
-
-![](https://oscimg.oschina.net/oscnet/up-3b7087b3524186977736ee0139c86109db4.png)
-
-### 3.3 修改redis配置
-
-![](https://oscimg.oschina.net/oscnet/up-40dc478d7c8c93f8debf9c44a5e176efd5a.png)
-
-### 3.4 阿里云存储配置
-
-![](https://oscimg.oschina.net/oscnet/up-74f1940f9ac3cea390c8aa4b79a48e0c566.png)
-
-### 3.5 阿里大鱼短信配置
-
-![](https://oscimg.oschina.net/oscnet/up-5f04ead1b63455a351f7d813f5b3add067a.png)
-
-###  四、项目部署与启动
-
-#### 4.1 启动后台JAVA服务
-
-> 先解压出`qiaoqiaoyun-start-2.0.jar`，注意qiaoqiaoyun-start-2.0.jar要与config在同一级目录
-
-![](https://oscimg.oschina.net/oscnet/up-d5adfe7788f79285a2c9025c0d2d2f6bd6c.png)
-
-- 启动命令
-```
-java -javaagent:qiaoqiaoyun-start-2.0.jar="-pwd 5eez3Vqil97n" -jar -Dfile.encoding=UTF-8 qiaoqiaoyun-start-2.0.jar
-```
-
-- 启动成功界面
-
-![](https://oscimg.oschina.net/oscnet/up-77cf956d12dbd68f679e42b2914c099ce26.png)
-
-![](https://oscimg.oschina.net/oscnet/up-0ced8f8c6fe0284ca3a300bc210eeca8947.png)
-
-#### 4.2 前端采用nginx部署
-
-#####   4.2.1 Nginx部署
-将dist.zip的内容解压到目录，通过nginx访问
-
-```
-server {
-    listen       80;
-    listen  [::]:80;
-    server_name  localhost;
-
-    location / {
-        try_files $uri $uri/ /index.html;
-        #前端dist解压到此目录
-        root   /usr/share/nginx/html;
-        index  index.html index.htm;
-    }
-
-    #映射后台接口地址
-    location  /qiaoqiaoyun {
-        proxy_pass         http://192.168.1.11:8080/;
-    }
-
-}
-```
-
-**注意：** proxy_pass配置的后台地址，必须用具体IP，不能使用127.0.0.1或者localhost，不然验证码会404.
-
-#####   4.2.2  前端解压效果图
-
-![](https://oscimg.oschina.net/oscnet/up-aeff064d6e2f31a18bc60279013fe4b7f54.png)
-
-#####  4.2.3 配置后端接口
- 修改dist.zip解压后的文件_app.config.js
-
-![](https://oscimg.oschina.net/oscnet/up-738bdbc9a18937d654698fdbbc91624a300.png)
-
-![](https://oscimg.oschina.net/oscnet/up-bbcf58c69710cc69c5182578e048f9c29e2.png)
-
-#####  4.2.4 访问系统
-
-- 登录系统( 默认账号admin,密码123456)
-
- 访问地址：http://localhost
-
-![](https://oscimg.oschina.net/oscnet/up-59b983dedd8c43f7ea5b784b1584e0a6704.png)
-
- - 进入平台效果
-
- ![](https://oscimg.oschina.net/oscnet/up-40655b7b552de38a6b2edaef2959f878466.png)
+- 1.应用管理功能， 应用的基础操作包含创建应用、修改应用、退出/删除应用、排序应用、维护应用、应用回收站、应用分组
+- 2.工作表管理，用来管理数据 可以像excel表格一样展示数据，也可以像看板和日历一样展示数据。在工作表中可以设计表单字段；可以添加、编辑、查看、删除数据，也可以分享、打印数据、导入导出。
+- 3.工作表视图管理，支持多视图，新建复制视图，视图个性化配置、视图过滤，排序、自定义显示字段，删除视图等，支持不同风格视图：表格视图、日历视图、看板视图
+- 4.表格视图： 像Excel表格一样展示数据，每个工作表创建后，都会有一个“全部”表格视图，展示所有数据及所有字段，并且不可删除。
+- 5.日历视图： 以日历形式展示数据，可根据日期字段将数据展示在具体日期中。默认为月，可切换为周、日模式来展示数据。
+- 6.发布表单，支持配置表单发布模式，提供给其他人填写，进行数据采集
+- 7.提供表单设计器，拥有40种控件类型供您使用，基本满足您的大部分的业务场景需求，每个控件都拥有不同的属性配置，根据不同的需求选择不同的控件类型
+- 8.表单设计器支持复杂控件，关联记录： 在表单中与其他表单有关联时可以使用关联记录；子表，用于主表中录入多条子表信息；栅格布局： 将一行一列的字段转换成一行多列显示，满足更多的需求；
+- 9.提供强大的函数能力，表单控件默认值支持35种系统函数，分别在数学函数、日期函数、文本函数、逻辑函数四个区域内，基本满足大部分场景需求
+- 10.提供仪表盘设计器，用于配置门户和报表，在仪表盘中可以设计不同的统计图表，按钮、轮播图等。将数据以各类图表和图形化的方式，以视觉形式来呈现
