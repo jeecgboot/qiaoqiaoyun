@@ -17,7 +17,8 @@
 
 - 快速搭建启动：https://help.qiaoqiaoyun.com/open/InstallStart.html
 
-![](https://oscimg.oschina.net/oscnet/up-af24689f19386ba17ca0d1ab3c108ccc9dc.png)
+![](https://oscimg.oschina.net/oscnet/up-af24689f19386ba17ca0d1ab3c108ccc9dc.png){:width="300px" height="200px"}
+
 
 
 ### 技术交流
