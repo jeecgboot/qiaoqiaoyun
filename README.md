@@ -33,7 +33,8 @@
 
 - 第一步：进入 `安装源`目录，手工解压出`dist`和`qiaoqiaoyun-start-2.0.jar`
 
-![](https://oscimg.oschina.net/oscnet/up-90b425243513890b8419e3d0793383d45e6.png)
+![](https://oscimg.oschina.net/oscnet/up-69a7d4ec96846c959332b1c53759900990e.png)
+
 
 - 第二步： 再`安装源`目录下，执行docker命令（前提先安装docker）
 ```
