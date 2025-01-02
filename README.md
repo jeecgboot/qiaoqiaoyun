@@ -21,14 +21,6 @@
  
 
 
-
-
-### 部署包下载
-
-
-- 下载地址： https://gitee.com/jeecg/qiaoqiaoyun
-
-
 ### 快速启动
 
 
@@ -39,11 +31,11 @@
 
 #### Docker快速启动
 
-- 第一步：进入 `安装源`目录，手工解压出dist和qiaoqiaoyun-start-2.0.jar
+- 第一步：进入 `安装源`目录，手工解压出`dist`和`qiaoqiaoyun-start-2.0.jar`
 
 ![](https://oscimg.oschina.net/oscnet/up-90b425243513890b8419e3d0793383d45e6.png)
 
-- 第二步： 执行下面docker命令（前提本地安装了docker）
+- 第二步： 再`安装源`目录下，执行docker命令（前提先安装docker）
 ```
 docker-compose -p qiaoqiaoyun_start up -d
 ```
