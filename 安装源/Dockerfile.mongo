@@ -1,0 +1,6 @@
+# 安装 MongoDB
+FROM registry.cn-hangzhou.aliyuncs.com/jeecgdocker/mongo AS mongo
+
+COPY ./config_docker/init-mongo.js /docker-entrypoint-initdb.d/
+
+CMD ["mongod"]
