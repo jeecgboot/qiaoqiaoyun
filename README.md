@@ -31,15 +31,9 @@
 
 #### Docker快速启动
 
-- 第一步：进入 `安装源`目录，手工解压出`dist`和`qiaoqiaoyun-start-2.0.jar`
-
-![](https://oscimg.oschina.net/oscnet/up-69a7d4ec96846c959332b1c53759900990e.png)
+- 一键安装敲敲云：https://help.qiaoqiaoyun.com/open/docker.html
 
 
-- 第二步： 在`安装源`目录，执行docker命令（前提先安装docker）
-```
-docker-compose -p qiaoqiaoyun_start up -d
-```
 
 ### 技术交流
 
