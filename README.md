@@ -1,5 +1,15 @@
 ## 敲敲云零代码
 
+
+当前最新版本： 2.0.1（发布日期：2025-01-02） 
+
+
+[![AUR](https://img.shields.io/badge/license-LGPL-3.0License%202.0-blue.svg)](https://gitee.com/jeecg/qiaoqiaoyun/blob/master/LICENSE)
+[![](https://img.shields.io/badge/Author-北京敲敲云-orange.svg)](https://qiaoqiaoyun.com)
+[![](https://img.shields.io/badge/version-2.0.1-brightgreen.svg)](https://gitee.com/jeecg/qiaoqiaoyun)
+
+
+
 敲敲云是一款免费的零代码平台，帮助企业快速搭建个性化业务应用！用户无需任何代码，即可搭建出符合业务需求的个性化应用。敲敲云拥有完善的应用搭建能力、表单引擎、流程引擎、仪表盘引擎，可满足企业的正常需求。
 
  **敲敲云可以做什么？**
@@ -11,6 +21,9 @@
  - 5.可以用它当原型设计软件，在客户现场傻瓜式拖拖拽拽出一个系统
  
 
+
+
+
 ### 部署包下载
 
 
@@ -20,6 +33,17 @@
 
 ![](https://oscimg.oschina.net/oscnet/up-af24689f19386ba17ca0d1ab3c108ccc9dc.png)
 
+### Docker快速启动
+
+- 第一步：进入 `安装源`目录，手工解压出dist和qiaoqiaoyun-start-2.0.jar
+
+![](https://oscimg.oschina.net/oscnet/up-aeff064d6e2f31a18bc60279013fe4b7f54.png)
+
+- 第二步： 执行下面docker命令（前提本地安装了docker）
+```
+cd 安装源
+docker-compose -p qiaoqiaoyun_start up -d
+```
 
 
 ### 技术交流
