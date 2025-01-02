@@ -4,7 +4,6 @@
 当前最新版本： 2.0.1（发布日期：2025-01-02） 
 
 
-[![AUR](https://img.shields.io/badge/license-LGPL-3.0License%202.0-blue.svg)](https://gitee.com/jeecg/qiaoqiaoyun/blob/master/LICENSE)
 [![](https://img.shields.io/badge/Author-北京敲敲云-orange.svg)](https://qiaoqiaoyun.com)
 [![](https://img.shields.io/badge/version-2.0.1-brightgreen.svg)](https://gitee.com/jeecg/qiaoqiaoyun)
 
@@ -29,11 +28,9 @@
 
 - 下载地址： https://gitee.com/jeecg/qiaoqiaoyun
 
-- 快速搭建启动：https://help.qiaoqiaoyun.com/open/InstallStart.html
 
-![](https://oscimg.oschina.net/oscnet/up-af24689f19386ba17ca0d1ab3c108ccc9dc.png)
-
-### Docker快速启动
+### 快速启动
+#### Docker快速启动
 
 - 第一步：进入 `安装源`目录，手工解压出dist和qiaoqiaoyun-start-2.0.jar
 
@@ -44,6 +41,12 @@
 cd 安装源
 docker-compose -p qiaoqiaoyun_start up -d
 ```
+
+#### 手工安装启动
+
+- 快速搭建启动：https://help.qiaoqiaoyun.com/open/InstallStart.html
+
+![](https://oscimg.oschina.net/oscnet/up-af24689f19386ba17ca0d1ab3c108ccc9dc.png)
 
 
 ### 技术交流
