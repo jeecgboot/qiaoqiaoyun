@@ -36,7 +36,7 @@
 ![](https://oscimg.oschina.net/oscnet/up-69a7d4ec96846c959332b1c53759900990e.png)
 
 
-- 第二步： 再`安装源`目录下，执行docker命令（前提先安装docker）
+- 第二步： 在`安装源`目录，执行docker命令（前提先安装docker）
 ```
 docker-compose -p qiaoqiaoyun_start up -d
 ```
