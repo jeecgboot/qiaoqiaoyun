@@ -30,6 +30,15 @@
 
 
 ### 快速启动
+
+
+#### 手工安装启动
+
+- 快速搭建启动：https://help.qiaoqiaoyun.com/open/InstallStart.html
+
+![](https://oscimg.oschina.net/oscnet/up-af24689f19386ba17ca0d1ab3c108ccc9dc.png)
+
+
 #### Docker快速启动
 
 - 第一步：进入 `安装源`目录，手工解压出dist和qiaoqiaoyun-start-2.0.jar
@@ -41,13 +50,6 @@
 cd 安装源
 docker-compose -p qiaoqiaoyun_start up -d
 ```
-
-#### 手工安装启动
-
-- 快速搭建启动：https://help.qiaoqiaoyun.com/open/InstallStart.html
-
-![](https://oscimg.oschina.net/oscnet/up-af24689f19386ba17ca0d1ab3c108ccc9dc.png)
-
 
 ### 技术交流
 
