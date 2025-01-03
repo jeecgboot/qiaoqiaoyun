@@ -18,7 +18,7 @@
  - 3.用它配置业务系统？例如：财务系统、CRM、进销存、OA、MIS系统等
  - 4.用它配置应用模板？你可以配置CRM、进销存等应用，将应用模板导出卖给他人，支持快速导入
  - 5.可以用它当原型设计软件，在客户现场傻瓜式拖拖拽拽出一个系统
- 
+ - 6.可以用它做毕业设计，拖拖拽拽出搭建一个毕业设计
 
 
 ### 快速启动
@@ -37,11 +37,11 @@
 
 ### 技术交流
 
+- 官方网站： https://www.qiaoqiaoyun.com
+- 在线体验： https://app.qiaoqiaoyun.com
 - QQ交流群：967780549
 - 用户手册：https://help.qiaoqiaoyun.com
 - 视频教程：https://qiaoqiaoyun.com/learnIndex
-- 官方网站： https://www.qiaoqiaoyun.com
-- 在线体验： https://app.qiaoqiaoyun.com
 - 反馈问题： https://gitee.com/jeecg/qiaoqiaoyun/issues/new
 
 
