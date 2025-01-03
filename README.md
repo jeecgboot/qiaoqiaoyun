@@ -42,6 +42,7 @@
 - 视频教程：https://qiaoqiaoyun.com/learnIndex
 - 官方网站： https://www.qiaoqiaoyun.com
 - 在线体验： https://app.qiaoqiaoyun.com
+- 反馈问题： https://gitee.com/jeecg/qiaoqiaoyun/issues/new
 
 
 ### 开源版有什么功能？
