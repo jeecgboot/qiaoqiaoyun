@@ -34,15 +34,20 @@
 - 一键安装敲敲云：https://help.qiaoqiaoyun.com/open/docker.html
 
 
-
 ### 技术交流
+
+- QQ交流群：967780549
+- 反馈问题： https://github.com/jeecgboot/qiaoqiaoyun/issues/new
+
+
+
+### 产品资料
 
 - 官方网站： https://www.qiaoqiaoyun.com
 - 在线体验： https://app.qiaoqiaoyun.com
-- QQ交流群：967780549
 - 用户手册：https://help.qiaoqiaoyun.com
 - 视频教程：https://qiaoqiaoyun.com/learnIndex
-- 反馈问题： https://gitee.com/jeecg/qiaoqiaoyun/issues/new
+
 
 
 ### 开源版有什么功能？
