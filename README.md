@@ -31,7 +31,8 @@
 
 #### Docker快速启动
 
-- 一键安装敲敲云：https://help.qiaoqiaoyun.com/open/docker.html
+- [Docker一键云安装](https://help.qiaoqiaoyun.com/open/dockerCloud.html)
+- [Docker本地构建安装](https://help.qiaoqiaoyun.com/open/docker.html)
 
 
 ### 技术交流
