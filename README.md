@@ -26,19 +26,13 @@
 
 #### 手工安装启动
 
-- 快速搭建启动：https://help.qiaoqiaoyun.com/open/InstallStart.html
+- [快速搭建启动](https://help.qiaoqiaoyun.com/open/InstallStart.html)
 
 
 #### Docker快速启动
 
 - [Docker一键云安装](https://help.qiaoqiaoyun.com/open/dockerCloud.html)
 - [Docker本地构建安装](https://help.qiaoqiaoyun.com/open/docker.html)
-
-
-### 技术交流
-
-- QQ交流群：967780549
-- 反馈问题： https://github.com/jeecgboot/qiaoqiaoyun/issues/new
 
 
 
@@ -48,6 +42,13 @@
 - 在线体验： https://app.qiaoqiaoyun.com
 - 用户手册：https://help.qiaoqiaoyun.com
 - 视频教程：https://qiaoqiaoyun.com/learnIndex
+
+
+### 技术交流
+
+- QQ交流群： 967780549
+- 技术支持： [在线反馈工单Issues](https://github.com/jeecgboot/qiaoqiaoyun/issues/new)
+
 
 
 
