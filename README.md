@@ -8,7 +8,11 @@
 [![](https://img.shields.io/badge/version-2.0.1-brightgreen.svg)](https://gitee.com/jeecg/qiaoqiaoyun)
 
 
-https://upload.jeecg.com/jeecg/qiaoqiaoyunsite/home-gif-banner.mp4
+<video width="320" height="240" controls>
+  <source src="https://upload.jeecg.com/jeecg/qiaoqiaoyunsite/home-gif-banner.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 
 
 敲敲云是一款免费的零代码平台，帮助企业快速搭建个性化业务应用！用户无需任何代码，即可搭建出符合业务需求的个性化应用。敲敲云拥有完善的应用搭建能力、表单引擎、流程引擎、仪表盘引擎，可满足企业的正常需求。
