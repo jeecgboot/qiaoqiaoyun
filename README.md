@@ -8,10 +8,8 @@
 [![](https://img.shields.io/badge/version-2.0.1-brightgreen.svg)](https://gitee.com/jeecg/qiaoqiaoyun)
 
 
-<video width="320" height="240" controls>
-  <source src="https://upload.jeecg.com/jeecg/qiaoqiaoyunsite/home-gif-banner.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+
+![零代码演示](https://upload.jeecg.com/jeecg/qiaoqiaoyunsite/home-gif-banner.gif)
 
 
 
