@@ -18,7 +18,8 @@
 
  **视频介绍**
 
-<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=114175196012014&bvid=BV1jUQeYfEM2&cid=28905770649&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+[![Image](https://www.qiaoqiaoyun.com/img/qqyun.png)](https://www.bilibili.com/video/BV1jUQeYfEM2/)
+
 
 
  **敲敲云可以做什么？**
