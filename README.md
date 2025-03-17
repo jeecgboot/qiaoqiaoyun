@@ -15,6 +15,12 @@
 
 敲敲云是一款AI应用开发平台、AI知识库与零代码平台结合的新一代零码产品，帮助企业以AI方式快速搭建个性化业务应用！用户无需任何代码，即可搭建出符合业务需求的个性化应用。敲敲云拥有完善的应用搭建能力、表单引擎、流程引擎、仪表盘引擎，可满足企业的正常需求；同时又是一款基于LLM大语言模型AI应用开发平台和 RAG 的开源知识库问答系统（AI模块25年上线）。
 
+
+ **视频介绍**
+
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=114175196012014&bvid=BV1jUQeYfEM2&cid=28905770649&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+
+
  **敲敲云可以做什么？**
  
  - 【AI应用开发平台+AI知识库+零代码平台】
