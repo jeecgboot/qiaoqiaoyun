@@ -14,7 +14,7 @@
 
  **视频介绍**
 
-[![Image](https://www.qiaoqiaoyun.com/img/qqyun.png)](https://www.bilibili.com/video/BV1jUQeYfEM2/)
+[![](https://www.qiaoqiaoyun.com/img/qqyun.png)](https://www.bilibili.com/video/BV1jUQeYfEM2)
 
 
 
