@@ -30,16 +30,16 @@
  - 7.可以用它做毕业设计，拖拖拽拽出搭建一个毕业设计
 
 
-下载代码
+获取部署包
 -----------------------------------
 
 > 因为qiaoqiaoyun-start-2.0.jar大于100M，所以采用Git LFS上传大文件，这会导致你直接下载会发现qiaoqiaoyun-start-2.0.jar只有 1 KB.
 
-#### 解决方法1
+#### 1.网盘下载
 
 直接通过 [百度网盘下载](https://pan.baidu.com/s/141_ugZIGfuiDw3t6GvyR1Q?pwd=gdkq)
 
-#### 解决方法2
+#### 2.Git LFS下载
 
 先安装Git LFS.
 
@@ -98,9 +98,9 @@ docker-compose -p qiaoqiaoyun_start up -d
 ```
 - 第四步：docker启动成功
 
-![](../.topwrite/assets/image_1735804913049.png)
+![](https://qiaoqiaoyun.oss-cn-beijing.aliyuncs.com/_cdn/qqtdocker_start1.png)
 
-![](../.topwrite/assets/image_1735804754711.png)
+![](https://qiaoqiaoyun.oss-cn-beijing.aliyuncs.com/_cdn/qqydocker_start2.png)
 
 
 - 第四步：访问系统
