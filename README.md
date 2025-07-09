@@ -4,9 +4,10 @@
 最新版本： 2.1.0（发布日期：2025-07-09） 
 
 
-[![](https://img.shields.io/badge/Author-北京敲敲云科技有限公司-orange.svg)](https://qiaoqiaoyun.com)
-[![](https://img.shields.io/badge/version-2.1.0-brightgreen.svg)](https://gitee.
-com/jeecg/qiaoqiaoyun)
+[![](https://img.shields.io/badge/Author-北京敲敲云-orange.svg)](https://qiaoqiaoyun.com)
+[![](https://img.shields.io/badge/version-2.0.1-brightgreen.svg)](https://gitee.com/jeecg/qiaoqiaoyun)
+
+
 
 
 项目介绍
