@@ -35,13 +35,21 @@
 
 > 因为qiaoqiaoyun-start-2.0.jar大于100M，所以采用Git LFS上传大文件，这会导致你直接下载会发现qiaoqiaoyun-start-2.0.jar只有 1 KB.
 
-解决方法
+#### 解决方法
+
 ```
-确保安装和配置 Git LFS，克隆或拉取时使用 LFS。
+确保安装和配置 Git LFS.
+- Windows: 可以从 [Git LFS 的官方网站 ](https://git-lfs.github.com/)下载并安装。
+- macOS: 可以使用 Homebrew 安装，在终端中运行：
+```
+brew install git-lfs
+```
+- Linux: 可以使用包管理器安装，或者从 [Git LFS 的 GitHub 页面](https://github.com/git-lfs/git-lfs/releases) 下载二进制文件。
+
 
 使用以下命令：
 ```
-git clone https://github.com/jeecgboot/qiaoqiaoyun.git
+git clone https://gitee.com/jeecg/qiaoqiaoyun.git
 ```
 
 如果你已经克隆了仓库并且需要下载 LFS 文件，可以运行：
@@ -75,6 +83,7 @@ git lfs pull
    解压dist.zip部署到nginx中，具体见文档：https://help.qiaoqiaoyun.com/open/InstallStart.html
 
 - 6.访问敲敲云
+
    http://localhost
 	
 	
