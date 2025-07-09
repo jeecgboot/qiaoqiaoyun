@@ -41,26 +41,17 @@
 
 #### 解决方法2
 
-确保安装和配置 Git LFS.
+先安装Git LFS.
 
 - Windows: 可以从 [Git LFS 的官方网站 ](https://git-lfs.github.com/)下载并安装。
-- macOS: 可以使用 Homebrew 安装，在终端中运行：
-```
-brew install git-lfs
-```
+- macOS: 可以使用 Homebrew 安装，在终端中运行：`brew install git-lfs`
 - Linux: 可以使用包管理器安装，或者从 [Git LFS 的 GitHub 页面](https://github.com/git-lfs/git-lfs/releases) 下载二进制文件。
 
 
-使用以下命令：
+再使用以下命令：
 ```
 git clone https://gitee.com/jeecg/qiaoqiaoyun.git
 ```
-
-如果你已经克隆了仓库并且需要下载 LFS 文件，可以运行：
-```
-git lfs pull
-```
-
 
 
 本地快速部署
