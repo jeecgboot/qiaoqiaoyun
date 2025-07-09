@@ -84,16 +84,45 @@ git lfs pull
 
 - 5.前端采用nginx部署
 
-   解压dist.zip部署到nginx中，具体见文档：https://help.qiaoqiaoyun.com/open/InstallStart.html
+   把dist部署到nginx中，具体见文档：https://help.qiaoqiaoyun.com/open/InstallStart.html
 
 - 6.访问敲敲云
 
    http://localhost
-	
-	
-Docker快速启动
+
+	账号密码：admin/123456
+
+
+Docker本地构建启动
 -----------------------------------
-- [Docker一键云安装](https://help.qiaoqiaoyun.com/open/dockerCloud.html)
+
+- 第一步：下载项目
+```
+git clone https://gitee.com/jeecg/qiaoqiaoyun.git
+```
+
+- 第二步： 执行docker命令
+```
+docker-compose -p qiaoqiaoyun_start up -d
+```
+- 第四步：docker启动成功
+
+![](../.topwrite/assets/image_1735804913049.png)
+
+![](../.topwrite/assets/image_1735804754711.png)
+
+
+- 第四步：访问系统
+> 等待1分钟，等所有docker服务启动后，访问nginx地址。 
+
+ 访问地址：http://localhost
+ 账号密码：admin/123456
+
+
+
+Docker一键云安装
+-----------------------------------
+- [直接下载对应docker镜像](https://help.qiaoqiaoyun.com/open/dockerCloud.html)
 
 
 
