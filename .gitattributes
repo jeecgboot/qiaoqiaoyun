@@ -1,5 +1,1 @@
-*.js linguist-language=Java
-*.css linguist-language=Java
-*.ts linguist-language=vue
-*.html linguist-language=vue
-*.sql linguist-language=Java
+*.jar filter=lfs diff=lfs merge=lfs -text
