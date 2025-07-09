@@ -60,7 +60,6 @@
 Docker快速启动
 -----------------------------------
 - [Docker一键云安装](https://help.qiaoqiaoyun.com/open/dockerCloud.html)
-- [Docker本地构建安装](https://help.qiaoqiaoyun.com/open/docker.html)
 
 
 
