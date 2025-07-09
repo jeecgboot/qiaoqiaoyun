@@ -30,6 +30,26 @@
  - 7.可以用它做毕业设计，拖拖拽拽出搭建一个毕业设计
 
 
+下载代码
+-----------------------------------
+
+> 因为qiaoqiaoyun-start-2.0.jar大于100M，所以采用Git LFS上传大文件，这会导致你直接下载会发现qiaoqiaoyun-start-2.0.jar只有 1 KB.
+
+解决方法
+```
+确保安装和配置 Git LFS，克隆或拉取时使用 LFS。
+
+使用以下命令：
+```
+git clone https://github.com/jeecgboot/qiaoqiaoyun.git
+```
+
+如果你已经克隆了仓库并且需要下载 LFS 文件，可以运行：
+```
+git lfs pull
+```
+
+
 
 本地快速部署
 -----------------------------------
