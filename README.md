@@ -41,8 +41,8 @@
 
 #### 解决方法2
 
-```
 确保安装和配置 Git LFS.
+
 - Windows: 可以从 [Git LFS 的官方网站 ](https://git-lfs.github.com/)下载并安装。
 - macOS: 可以使用 Homebrew 安装，在终端中运行：
 ```
