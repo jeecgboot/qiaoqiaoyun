@@ -1,0 +1,1 @@
+import{d as e,a6 as o,a7 as a}from"./vue-vendor-24c7dc61.js";import{l as r}from"./index-831af9dd.js";import"./antd-vue-vendor-0d72f01e.js";import"./vxe-table-vendor-8813019a.js";const t=e({name:"FrameBlank"});function n(s,c,m,p,i,f){return o(),a("div")}const u=r(t,[["render",n]]);export{u as default};

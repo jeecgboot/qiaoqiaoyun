@@ -1,0 +1,1 @@
+import{l as t}from"./index-831af9dd.js";import"./vue-vendor-24c7dc61.js";import"./antd-vue-vendor-0d72f01e.js";import"./vxe-table-vendor-8813019a.js";const o={name:"RightChat",props:{},components:{},setup(){}};function r(p,e,n,s,a,c){return null}const u=t(o,[["render",r]]);export{u as default};

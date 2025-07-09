@@ -1,0 +1,1 @@
+import{k as e}from"./index-831af9dd.js";import{M as c}from"./antd-vue-vendor-0d72f01e.js";const d=()=>e.get({url:"/sys/dict/refleshCache"},{isTransformResponse:!1}),l=()=>e.get({url:"/sys/dict/queryAllDictItems"},{isTransformResponse:!1});export{l as q,d as r};

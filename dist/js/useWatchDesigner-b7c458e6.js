@@ -1,0 +1,1 @@
+import{c as l,f as u,w as f,b as g}from"./vue-vendor-24c7dc61.js";function w(i){const e=l("getDesignerVisible",u(!1)),c=f(e,r=>{var a,n;r&&((a=i==null?void 0:i.getVisible)!=null&&a.value)&&((n=(i==null?void 0:i.closeModal)||(i==null?void 0:i.closeDrawer))==null||n())},{immediate:!0});g(()=>c())}export{w as u};

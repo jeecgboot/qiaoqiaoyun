@@ -1,0 +1,79 @@
+version: '2.0'
+services:
+  qiaoqiaoyun-mysql:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_HOST: '%'
+      TZ: Asia/Shanghai
+    restart: always
+    container_name: qiaoqiaoyun-mysql
+    image: qiaoqiaoyun-mysql
+    command:
+      --character-set-server=utf8mb4
+      --collation-server=utf8mb4_general_ci
+      --explicit_defaults_for_timestamp=true
+      --lower_case_table_names=1
+      --max_allowed_packet=128M
+      --default-authentication-plugin=caching_sha2_password
+    ports:
+      - 13306:3306
+    networks:
+      - qiaoqiaoyun
+
+  qiaoqiaoyun-redis:
+    image: registry.cn-hangzhou.aliyuncs.com/jeecgdocker/redis:5.0
+    # ports:
+    #   - 16379:6379
+    restart: always
+    hostname: qiaoqiaoyun-redis
+    container_name: qiaoqiaoyun-redis
+    networks:
+      - qiaoqiaoyun
+
+  qiaoqiaoyun-mongo:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.mongo
+    restart: always
+    container_name: qiaoqiaoyun-mongo
+    image: qiaoqiaoyun-mongo
+    ports:
+      - 27017:27017
+    networks:
+      - qiaoqiaoyun
+
+  qiaoqiaoyun-system:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.javax
+    restart: on-failure
+    depends_on:
+      - qiaoqiaoyun-mysql
+      - qiaoqiaoyun-redis
+    container_name: qiaoqiaoyun-system
+    image: qiaoqiaoyun-system
+    hostname: qiaoqiaoyun-system
+    # ports:
+    #   - 8080:8080
+    networks:
+      - qiaoqiaoyun
+
+  qiaoqiaoyun-nginx:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.nginx
+    container_name: qiaoqiaoyun-nginx
+    image: qiaoqiaoyun-nginx
+    depends_on:
+      - qiaoqiaoyun-system
+    networks:
+      - qiaoqiaoyun
+    ports:
+      - 80:80
+
+networks:
+  qiaoqiaoyun:
+    name: qiaoqiaoyun
