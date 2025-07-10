@@ -33,22 +33,15 @@
 获取部署包
 -----------------------------------
 
-> 因为qiaoqiaoyun-start-2.0.jar大于100M，所以采用Git LFS上传大文件，这会导致你直接下载会发现qiaoqiaoyun-start-2.0.jar只有 1 KB.
-
 #### 1.网盘下载
 
 直接通过 [百度网盘下载](https://pan.baidu.com/s/141_ugZIGfuiDw3t6GvyR1Q?pwd=gdkq)
 
 #### 2.Git LFS下载
 
-先安装Git LFS.
+> 因为qiaoqiaoyun-start-2.0.jar大于100M，所以采用Git LFS上传大文件，这会导致你直接下载会发现qiaoqiaoyun-start-2.0.jar只有 1 KB.
 
-- Windows: 可以从 [Git LFS 的官方网站 ](https://git-lfs.github.com/)下载并安装。
-- macOS: 可以使用 Homebrew 安装，在终端中运行：`brew install git-lfs`
-- Linux: 可以使用包管理器安装，或者从 [Git LFS 的 GitHub 页面](https://github.com/git-lfs/git-lfs/releases) 下载二进制文件。
-
-
-再使用以下命令：
+你可以通过命令：
 ```
 git clone https://gitee.com/jeecg/qiaoqiaoyun.git
 ```
@@ -60,7 +53,6 @@ git clone https://gitee.com/jeecg/qiaoqiaoyun.git
 
 - 1.本地安装jdk7+
 
-
 - 2.执行下面的Mysql脚本(自动创建数据库：qiaoqiaoyun)
 
 ```
@@ -69,13 +61,13 @@ git clone https://gitee.com/jeecg/qiaoqiaoyun.git
 
 - 3.修改数据库和redis等配置
 
-   修改 config/application-prod.yml，具体内容见：https://help.qiaoqiaoyun.com/open/InstallStart.html
+   修改 config/application-prod.yml，见[具体配置](https://help.qiaoqiaoyun.com/open/InstallStart.html)
 
 - 4.双击 start.bat 启动后台
 
 - 5.前端采用nginx部署
 
-   把dist部署到nginx中，具体见文档：https://help.qiaoqiaoyun.com/open/InstallStart.html
+   把dist部署到nginx中，具体[见文档](https://help.qiaoqiaoyun.com/open/InstallStart.html)
 
 - 6.访问敲敲云
 
@@ -98,8 +90,6 @@ docker-compose -p qiaoqiaoyun_start up -d
 ```
 - 第四步：docker启动成功
 
-![](https://qiaoqiaoyun.oss-cn-beijing.aliyuncs.com/_cdn/qqtdocker_start1.png)
-
 ![](https://qiaoqiaoyun.oss-cn-beijing.aliyuncs.com/_cdn/qqydocker_start2.png)
 
 
@@ -111,12 +101,6 @@ docker-compose -p qiaoqiaoyun_start up -d
 
 
 
-Docker一键云安装
------------------------------------
-- [直接下载对应docker镜像](https://help.qiaoqiaoyun.com/open/dockerCloud.html)
-
-
-
 技术交流
 -----------------------------------
 - 官方网站： https://www.qiaoqiaoyun.com
@@ -124,8 +108,6 @@ Docker一键云安装
 - 使用手册： https://help.qiaoqiaoyun.com
 - QQ交流群： 967780549
 - 技术支持： [在线反馈工单Issues](https://github.com/jeecgboot/qiaoqiaoyun/issues/new)
-
-
 
 
 
