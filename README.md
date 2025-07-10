@@ -66,27 +66,19 @@ git clone https://gitee.com/jeecg/qiaoqiaoyun.git
 
 Docker本地构建启动
 -----------------------------------
-
+```
 - 第一步：下载项目
-```
 git clone https://gitee.com/jeecg/qiaoqiaoyun.git
-```
 
 - 第二步： 执行docker命令
-```
 docker-compose -p qiaoqiaoyun_start up -d
-```
-- 第四步：docker启动成功
 
-![](https://qiaoqiaoyun.oss-cn-beijing.aliyuncs.com/_cdn/qqydocker_start2.png)
-
-
-- 第四步：访问系统
-> 等待1分钟，等所有docker服务启动后，访问nginx地址。 
+- 第三步：访问系统
+ 等待1分钟，等所有docker服务启动后，访问nginx地址（如果访问不通，请确认下每个docker的启动日志） 
 
  访问地址：http://localhost
  账号密码：admin/123456
-
+```
 
 
 技术交流
