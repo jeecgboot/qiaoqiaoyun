@@ -71,9 +71,9 @@ Docker本地构建启动
 git clone https://gitee.com/jeecg/qiaoqiaoyun.git
 
 - 第二步： 执行docker命令
-docker-compose -p qiaoqiaoyun_start up -d
+前提：先安装Docker Compose，见文档 https://help.qiaoqiaoyun.com/open/base/dockerCompose.html
 
-Docker Compose安装，见文档 https://help.qiaoqiaoyun.com/open/base/dockerCompose.html
+docker-compose -p qiaoqiaoyun_start up -d
 
 - 第三步：访问系统
  等待1分钟，等所有docker服务启动后，访问nginx地址（如果访问不通，请确认下每个docker的启动日志） 
