@@ -38,10 +38,16 @@
 直接通过 [百度网盘下载](https://pan.baidu.com/s/141_ugZIGfuiDw3t6GvyR1Q?pwd=gdkq)
 
 #### 2.Git LFS下载
+> 因为qiaoqiaoyun-start-2.0.jar大于100M，采用Git LFS上传大文件，这会导致你直接下载会发现qiaoqiaoyun-start-2.0.jar只有 1 KB；所以本地需先安装Git LFS.
 
-> 因为qiaoqiaoyun-start-2.0.jar大于100M，所以采用Git LFS上传大文件，这会导致你直接下载会发现qiaoqiaoyun-start-2.0.jar只有 1 KB.
 
-你可以通过命令：
+ 安装Git LFS方法
+- Windows: 可以从 [Git LFS 的官方网站 ](https://git-lfs.github.com/)下载并安装。
+- macOS: 可以使用 Homebrew 安装，在终端中运行命令： `brew install git-lfs`
+- Linux: 可以使用包管理器安装，或者从 [Git LFS 的 GitHub 页面](https://github.com/git-lfs/git-lfs/releases) 下载二进制文件。
+
+
+安装Git LFS后，执行命令：
 ```
 git clone https://gitee.com/jeecg/qiaoqiaoyun.git
 ```
