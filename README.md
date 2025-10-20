@@ -1,4 +1,4 @@
-敲敲云零代码平台
+敲敲云零代码平台(无代码平台)
 ===============
 
 最新版本： 2.1.0（发布日期：2025-07-09） 
@@ -13,7 +13,7 @@
 
 项目介绍
 -----------------------------------
-<h3 align="center">APaaS零代码平台</h3>
+<h3 align="center">敲敲云 APaaS零代码平台</h3>
 
 敲敲云是一款免费的APaaS零代码平台集成了AI应用开发平台，帮助企业快速搭建个性化业务应用！用户无需任何代码，即可搭建出符合业务需求的个性化应用。敲敲云拥有完善的应用搭建能力、表单引擎、流程引擎、仪表盘引擎，可满足企业的正常需求。
 
@@ -38,21 +38,28 @@
 获取部署包
 -----------------------------------
 
-#### 1.网盘下载
+#### 1.通过 Release 下载（推荐）
+
+> **推荐方式**：直接从 Release 页面下载完整安装包，无需安装 Git LFS，下载即用！
+
+- GitHub Release：[https://github.com/jeecgboot/qiaoqiaoyun/releases](https://github.com/jeecgboot/qiaoqiaoyun/releases)
+
+#### 2.网盘下载
 
 直接通过 [百度网盘下载](https://pan.baidu.com/s/141_ugZIGfuiDw3t6GvyR1Q?pwd=gdkq)
 
-#### 2.Git LFS下载
-> 因为qiaoqiaoyun-start-2.1.0.jar大于100M，采用Git LFS上传大文件，这会导致你直接下载会发现qiaoqiaoyun-start-2.1.0.jar只有 1 KB；所以本地需先安装Git LFS.
+#### 3.Git LFS 克隆下载
+> ⚠️ **注意**：因为 qiaoqiaoyun-start-2.1.0.jar 大于 100M，采用 Git LFS 上传大文件。如果直接使用 git clone 下载，会发现 qiaoqiaoyun-start-2.1.0.jar 只有 1 KB。
+> 
+> **建议**：如果不熟悉 Git LFS，请使用上面的 Release 下载或网盘下载方式，更加简单方便！
 
-
- 安装Git LFS方法
+安装 Git LFS 方法：
 - Windows: 可以从 [Git LFS 的官方网站 ](https://git-lfs.github.com/)下载并安装。
 - macOS: 可以使用 Homebrew 安装，在终端中运行命令： `brew install git-lfs`
 - Linux: 可以使用包管理器安装，或者从 [Git LFS 的 GitHub 页面](https://github.com/git-lfs/git-lfs/releases) 下载二进制文件。
 
 
-安装Git LFS后，执行命令：
+安装 Git LFS 后，执行命令：
 ```
 git clone https://gitee.com/jeecg/qiaoqiaoyun.git
 ```
