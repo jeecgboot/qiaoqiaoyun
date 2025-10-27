@@ -129,11 +129,9 @@ git clone https://gitee.com/jeecg/qiaoqiaoyun.git
 - 2.执行下面的Mysql脚本(自动创建数据库：qiaoqiaoyun)
    qiaoqiaoyun.sql
 - 3.修改数据库和redis等配置
-   修改 config/application-prod.yml，具体配置见https://help.qiaoqiaoyun.com/open/InstallStart.html
+   修改 config/application-prod.yml，详见 https://help.qiaoqiaoyun.com/readme.html
 - 4.双击 start.bat 启动后台
-- 5.前端采用nginx部署
-   把dist部署到nginx中，具体见文档https://help.qiaoqiaoyun.com/open/InstallStart.html
-- 6.访问敲敲云
+- 5.访问敲敲云
    http://localhost
    账号密码：admin/123456
 ```
@@ -150,7 +148,7 @@ git clone https://gitee.com/jeecg/qiaoqiaoyun.git
 docker-compose -p qiaoqiaoyun_start up -d
 
 - 第三步：访问系统
- 等待1分钟，等所有docker服务启动后，访问nginx地址（如果访问不通，请确认下每个docker的启动日志） 
+ 等待1分钟，等所有docker服务启动后，访问下面地址（如果不通，请确认下每个docker是否启动成） 
 
  访问地址：http://localhost
  账号密码：admin/123456
