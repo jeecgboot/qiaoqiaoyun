@@ -1,11 +1,11 @@
 敲敲云零代码平台(无代码平台)
 ===============
 
-最新版本： 2.1.0（发布日期：2025-07-09） 
+最新版本： 2.2.0（发布日期：2025-10-28） 
 
 
 [![](https://img.shields.io/badge/Author-北京敲敲云-orange.svg)](https://qiaoqiaoyun.com)
-[![](https://img.shields.io/badge/version-2.1.0-brightgreen.svg)](https://github.com/jeecgboot/qiaoqiaoyun)
+[![](https://img.shields.io/badge/version-2.2.0-brightgreen.svg)](https://github.com/jeecgboot/qiaoqiaoyun)
 [![GitHub stars](https://img.shields.io/github/stars/jeecgboot/qiaoqiaoyun.svg?style=social&label=Stars)](https://github.com/jeecgboot/qiaoqiaoyun)
 [![GitHub forks](https://img.shields.io/github/forks/jeecgboot/qiaoqiaoyun.svg?style=social&label=Fork)](https://github.com/jeecgboot/qiaoqiaoyun)
 [![](https://img.shields.io/badge/blog-免费低代码平台-orange.svg)](https://jeecg.com/download)

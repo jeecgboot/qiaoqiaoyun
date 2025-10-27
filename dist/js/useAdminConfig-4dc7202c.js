@@ -1,1 +1,0 @@
-const o=[{code:"appAdmin",roleName:"组织应用管理员",count:0,description:["应用管理"]},{code:"accountAdmin",roleName:"组织账户管理员",count:0,description:["组织账户","网络广播员"]},{code:"superAdmin",roleName:"超级管理员",count:1,description:["组织账户","网络广播员","应用管理"]}];export{o as a};

@@ -56,23 +56,10 @@ services:
     container_name: qiaoqiaoyun-system
     image: qiaoqiaoyun-system
     hostname: qiaoqiaoyun-system
-    # ports:
-    #   - 8080:8080
-    networks:
-      - qiaoqiaoyun
-
-  qiaoqiaoyun-nginx:
-    build:
-      context: .
-      dockerfile: docker/Dockerfile.nginx
-    container_name: qiaoqiaoyun-nginx
-    image: qiaoqiaoyun-nginx
-    depends_on:
-      - qiaoqiaoyun-system
-    networks:
-      - qiaoqiaoyun
     ports:
       - 80:80
+    networks:
+      - qiaoqiaoyun
 
 networks:
   qiaoqiaoyun:

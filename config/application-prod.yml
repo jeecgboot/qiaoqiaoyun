@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 80
   tomcat:
     max-swallow-size: -1
   error:
@@ -170,8 +170,8 @@ mybatis-plus:
 minidao:
   base-package: org.jeecg.modules.jmreport.*,org.jeecg.modules.drag.*
 jeecg:
-  # 自定义资源前缀
-  custom-resource-prefix-path: qiaoqiaoyun
+  # # 自定义资源前缀
+  # custom-resource-prefix-path: qiaoqiaoyun
   # 平台上线安全配置
   firewall:
     # 数据源安全 (开启后，Online报表和图表、积木报表的数据源为必填)
