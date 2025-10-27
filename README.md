@@ -144,8 +144,8 @@ docker-compose -p qiaoqiaoyun_start up -d
 
 
 
-### 🛠️ 技术架构
-
+🛠️ 技术架构
+-----------------------------------
 - **后端技术**：Spring Boot、MyBatis、Redis、MongoDB
 - **前端技术**：Vue 3、Element Plus、ECharts
 - **数据库**：MySQL 5.7+、MongoDB（可选）
