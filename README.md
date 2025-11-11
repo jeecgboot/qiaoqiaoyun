@@ -1,11 +1,11 @@
-敲敲云零代码平台(无代码平台)
+敲敲云 AI零代码平台
 ===============
 
-最新版本： 2.2.0（发布日期：2025-10-28） 
+最新版本： 2.2.1（发布日期：2025-11-10） 
 
 
 [![](https://img.shields.io/badge/Author-北京敲敲云-orange.svg)](https://qiaoqiaoyun.com)
-[![](https://img.shields.io/badge/version-2.2.0-brightgreen.svg)](https://github.com/jeecgboot/qiaoqiaoyun)
+[![](https://img.shields.io/badge/version-2.2.1-brightgreen.svg)](https://github.com/jeecgboot/qiaoqiaoyun)
 [![GitHub stars](https://img.shields.io/github/stars/jeecgboot/qiaoqiaoyun.svg?style=social&label=Stars)](https://github.com/jeecgboot/qiaoqiaoyun)
 [![GitHub forks](https://img.shields.io/github/forks/jeecgboot/qiaoqiaoyun.svg?style=social&label=Fork)](https://github.com/jeecgboot/qiaoqiaoyun)
 [![](https://img.shields.io/badge/blog-免费低代码平台-orange.svg)](https://jeecg.com/download)
@@ -15,14 +15,14 @@
 -----------------------------------
 <h3 align="center">敲敲云·零代码平台(无代码平台)</h3>
 
-敲敲云是一款**免费的企业级零代码平台**，用户无需编码，即可拖拽快速搭建出复杂业务系统，5分钟可搭建一套CRM系统、进销存系统等！
+敲敲云是一款**免费的AI零代码平台**，助力企业快速实现搭建业务系统和构建AI应用！用户无需编码，即可快速拖拽出复杂业务系统，5分钟可搭建一套CRM系统等！
 她集成了**零代码应用**、**AI应用平台**和**AI知识库**，可帮助企业快速搭建个性化业务应用 和 AI应用、AI知识库、AI聊天助手！
-敲敲云拥有完善的**应用搭建能力**、**表单引擎**、**流程引擎**、**仪表盘引擎**，可满足企业90%以上的业务场景需求。
+敲敲云拥有完善的**应用搭建能力**、**表单引擎**、**流程引擎**、**仪表盘引擎**、**大屏&报表**，可满足企业90%以上的业务场景需求。
 
 无需编码，10分钟，让大学生傻瓜式搭建自己的毕业设计！
 
 ```
-🎯 专注于开源，打造 "专业 易用 智能" 的企业级零代码平台
+🎯 专注于开源，打造 "专业 易用 智能" 的企业级AI零代码平台
 📜 开源协议：功能免费、可以商用、代码不开放
 🚀 我们的口号：做简道云/明道云本地化的平替产品
 💡 核心优势：支持私有化部署、数据自主可控、永久免费使用
