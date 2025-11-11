@@ -9,6 +9,6 @@ WORKDIR /qiaoqiaoyun
 EXPOSE 80
 
 ADD ./docker/config/application-prod.yml ./config/application-prod.yml
-ADD qiaoqiaoyun-start-2.2.0.jar ./
+ADD qiaoqiaoyun-start-2.2.1.jar ./
 
-CMD sleep 60;java -Djava.security.egd=file:/dev/./urandom -javaagent:qiaoqiaoyun-start-2.2.0.jar="-pwd 5eez3Vqil97n" -jar -Dfile.encoding=UTF-8 qiaoqiaoyun-start-2.2.0.jar
+CMD sleep 60;java -Djava.security.egd=file:/dev/./urandom -javaagent:qiaoqiaoyun-start-2.2.1.jar="-pwd 5eez3Vqil97n" -jar -Dfile.encoding=UTF-8 qiaoqiaoyun-start-2.2.1.jar

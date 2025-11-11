@@ -1,1 +1,1 @@
-java -javaagent:qiaoqiaoyun-start-2.2.0.jar="-pwd 5eez3Vqil97n" -jar -Dfile.encoding=UTF-8 qiaoqiaoyun-start-2.2.0.jar
+java -javaagent:qiaoqiaoyun-start-2.2.1.jar="-pwd 5eez3Vqil97n" -jar -Dfile.encoding=UTF-8 qiaoqiaoyun-start-2.2.1.jar
