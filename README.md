@@ -62,7 +62,7 @@
 直接通过 [百度网盘下载](https://pan.baidu.com/s/141_ugZIGfuiDw3t6GvyR1Q?pwd=gdkq)
 
 #### 3.Git LFS 克隆下载
-> ⚠️ **注意**：因为 qiaoqiaoyun-start-*.jar 大于 100M，采用 Git LFS 上传大文件。如果直接使用 git clone 下载，会发现 qiaoqiaoyun-start-*.jar 只有 1 KB。
+> ⚠️ **注意**：因为 qiaoqiaoyun-start-\*.jar 大于 100M，采用 Git LFS 上传大文件。如果直接使用 git clone 下载，会发现 qiaoqiaoyun-start-\*.jar 只有 1 KB。
 > 
 > **建议**：如果不熟悉 Git LFS，请使用上面的 Release 下载或网盘下载方式，更加简单方便！
 
