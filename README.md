@@ -62,6 +62,8 @@ git clone https://gitee.com/jeecg/qiaoqiaoyun.git
 本地快速部署
 -----------------------------------
 
+安装手册：https://help.qiaoqiaoyun.com/open/simpleStart.html
+
 ### 📝 部署步骤
 
 ```
@@ -90,7 +92,6 @@ git clone https://gitee.com/jeecg/qiaoqiaoyun.git
 > 💡 **提示**：
 > - 首次启动可能需要 1-2 分钟，请耐心等待
 > - 如遇端口占用，可修改配置文件中的端口号
-> - 详细配置说明：https://help.qiaoqiaoyun.com/open/simpleStart.html
 
 
 
