@@ -13,7 +13,7 @@
 
 项目介绍
 -----------------------------------
-<h3 align="center">AI零代码平台\无代码</h3>
+<h3 align="center">AI零代码平台</h3>
 
 敲敲云是一款**免费的AI零代码平台**，助力企业快速实现搭建业务系统和构建AI应用！用户无需编码，即可快速拖拽出复杂业务系统，5分钟可搭建一套CRM系统等！
 她集成了**零代码应用**、**AI应用平台**和**AI知识库**，可帮助企业快速搭建个性化业务应用 和 AI应用、AI知识库、AI聊天助手！
@@ -28,28 +28,10 @@
 💡 核心优势：支持私有化部署、数据自主可控、永久免费使用
 ```
 
-### 🌟 核心特性
-
-- **🤖 AI智能赋能**：集成ChatGPT、DeepSeek等主流大模型，支持AI建表、智能问答、工作流编排
-- **📊 可视化设计**：拖拽式表单设计、流程设计、仪表盘设计，零代码基础也能快速上手
-- **🔄 流程自动化**：强大的流程引擎，支持审批、填写、数据处理等自动化业务流转
-- **📱 多端适配**：支持Web、APP、H5、钉钉、企业微信等多终端访问
-- **🔌 开放集成**：提供完善的API接口，支持与第三方系统无缝对接
-- **🏢 私有化部署**：支持本地部署，数据完全自主可控，保障企业数据安全
-- **📈 数据可视化**：20+种统计图表，实时展示业务数据，辅助决策分析
-- **🎨 应用模板**：内置丰富的行业应用模板，支持一键导入快速使用
 
 
-获取部署包
+下载部署包
 -----------------------------------
-
-### 📋 系统要求
-
-- **Java版本**：JDK 8+ （推荐 JDK 17）
-- **内存**：建议 4GB+ RAM
-- **数据库**：MySQL 5.7+ 或 8.0+
-- **数据库**：MongoDB
-- **缓存**：Redis
 
 #### 1.通过 Release 下载（⭐ 推荐）
 
@@ -85,15 +67,15 @@ git clone https://gitee.com/jeecg/qiaoqiaoyun.git
 ```
 1. 环境准备
    - 安装 JDK 8+（推荐 JDK 17）
-   - 安装 MySQL 5.7+
+   - 安装 MySQL 5.7+、 Mongodb、redis
 
 2. 数据库初始化
    - 执行 MySQL 脚本：qiaoqiaoyun.sql（自动创建数据库：qiaoqiaoyun）
-   
+   - Mongodb不需要初始化
+
 3. 配置修改
    - 编辑 config/application-prod.yml 配置文件
-   - 修改数据库连接信息（用户名/密码）
-   - 必选：配置 Redis 和 MongoDB
+   - 修改Mysql数据库、Redis 和 MongoDB的配置
    
 4. 启动应用
    - Windows：双击 start.bat
@@ -110,28 +92,13 @@ git clone https://gitee.com/jeecg/qiaoqiaoyun.git
 > - 如遇端口占用，可修改配置文件中的端口号
 > - 详细配置说明：https://help.qiaoqiaoyun.com/open/simpleStart.html
 
-Docker本地构建启动
+
+
+Docker一键安装
 -----------------------------------
 
-### 🐳 Docker 一键部署
+- Docker一键云部署： https://help.qiaoqiaoyun.com/open/dockerCloud.html
 
-```bash
-# 第一步：下载项目
-git clone https://gitee.com/jeecg/qiaoqiaoyun.git
-
-# 第二步：执行 Docker 命令
-# 前提：先安装 Docker Compose，见文档 https://help.qiaoqiaoyun.com/open/base/dockerCompose.html
-docker-compose -p qiaoqiaoyun_start up -d
-
-# 第三步：访问系统
-# 等待1分钟，等所有 docker 服务启动后，访问下面地址
-# （如果不通，请确认每个 docker 是否启动成功）
-```
-
-**访问信息：**
-- 地址：http://localhost
-- 账号：admin
-- 密码：123456
 
 
 技术交流
@@ -144,13 +111,16 @@ docker-compose -p qiaoqiaoyun_start up -d
 
 
 
-🛠️ 技术架构
------------------------------------
-- **后端技术**：Spring Boot、MyBatis、Redis、MongoDB
-- **前端技术**：Vue 3、Element Plus、ECharts
-- **数据库**：MySQL 5.7+、MongoDB（可选）
-- **部署方式**：支持Docker、Docker Compose、传统部署
-- **运行环境**：JDK 8+、Node.js 14+
+### 🌟 核心特性
+
+- **🤖 AI智能赋能**：集成ChatGPT、DeepSeek等主流大模型，支持AI建表、智能问答、工作流编排
+- **📊 可视化设计**：拖拽式表单设计、流程设计、仪表盘设计，零代码基础也能快速上手
+- **🔄 流程自动化**：强大的流程引擎，支持审批、填写、数据处理等自动化业务流转
+- **📱 多端适配**：支持Web、APP、H5、钉钉、企业微信等多终端访问
+- **🔌 开放集成**：提供完善的API接口，支持与第三方系统无缝对接
+- **🏢 私有化部署**：支持本地部署，数据完全自主可控，保障企业数据安全
+- **📈 数据可视化**：20+种统计图表，实时展示业务数据，辅助决策分析
+- **🎨 应用模板**：内置丰富的行业应用模板，支持一键导入快速使用
 
 
 敲敲云可以做什么？
