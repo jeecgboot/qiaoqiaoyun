@@ -3,11 +3,11 @@
 QiaoQiaoYun AI No-Code Platform
 ===============
 
-Latest Version: 2.2.1 (Release Date: 2025-11-10) 
+Latest Version: 2.3.0 (Release Date: 2026-01-19) 
 
 
 [![](https://img.shields.io/badge/Author-Beijing%20Guoju%20Information%20Technology%20Co.%2C%20Ltd.-orange.svg)](https://www.guojusoft.com)
-[![](https://img.shields.io/badge/version-2.2.1-brightgreen.svg)](https://github.com/jeecgboot/qiaoqiaoyun)
+[![](https://img.shields.io/badge/version-2.3.0-brightgreen.svg)](https://github.com/jeecgboot/qiaoqiaoyun)
 [![GitHub stars](https://img.shields.io/github/stars/jeecgboot/qiaoqiaoyun.svg?style=social&label=Stars)](https://github.com/jeecgboot/qiaoqiaoyun)
 [![GitHub forks](https://img.shields.io/github/forks/jeecgboot/qiaoqiaoyun.svg?style=social&label=Fork)](https://github.com/jeecgboot/qiaoqiaoyun)
 [![](https://img.shields.io/badge/blog-Free%20Low--Code%20Platform-orange.svg)](https://jeecg.com/download)
@@ -21,7 +21,8 @@ QiaoQiaoYun is a **free AI-powered no-code platform** that helps enterprises qui
 It integrates **no-code applications**, **AI application platform**, and **AI knowledge base**, helping enterprises quickly build personalized business applications, AI applications, AI knowledge bases, and AI chat assistants!
 QiaoQiaoYun has comprehensive **application building capabilities**, **form engine**, **workflow engine**, **dashboard engine**, and **large screen & reports**, meeting over 90% of enterprise business scenario requirements.
 
-No coding required - in 10 minutes, even college students can easily build their graduation projects!
+- No coding required, build your graduation project in just 10 minutes with a foolproof process designed for college students!
+- Completely free with no limits on the number of users, apps, forms, dashboards, workflows, and more!
 
 ```
 🎯 Focus on open source, creating a "professional, easy-to-use, intelligent" enterprise-level AI no-code platform
