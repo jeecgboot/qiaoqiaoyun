@@ -3,7 +3,7 @@
 敲敲云 AI零代码平台
 ===============
 
-最新版本： 2.3.0（发布日期：2026-01-19） 
+最新版本： 2.3.0（发布日期：2026-01-12） 
 
 
 [![](https://img.shields.io/badge/Author-北京国炬信息技术有限公司-orange.svg)](https://www.guojusoft.com)
