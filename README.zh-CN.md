@@ -1,4 +1,4 @@
-[中文](./README.zh-CN.md) | [English](./README.md)
+中文 | [English](./README.md)
 
 敲敲云 AI零代码平台
 ===============
