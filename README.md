@@ -13,6 +13,10 @@ Latest Version: 2.3.0 (Release Date: 2026-01-12)
 [![](https://img.shields.io/badge/blog-Free%20Low--Code%20Platform-orange.svg)](https://jeecg.com/download)
 
 
+On January 12, 2026, Qiaoqiao Cloud officially released its brand-new version v2.3.0! The biggest highlight of this release is that the platform is now permanently free, breaking the multiple limitations on the number of users, applications, and forms commonly found in traditional low-code platforms, achieving truly zero-threshold and zero-cost usage.
+
+
+
 Project Introduction
 -----------------------------------
 <h3 align="center">Free No-Code Platform</h3>
