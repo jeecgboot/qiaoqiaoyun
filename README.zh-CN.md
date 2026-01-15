@@ -49,27 +49,11 @@
 下载部署包
 -----------------------------------
 
-#### 1.通过 Release 下载（⭐推荐）
+> 如果github网络不好，优先通过百度网盘下载
 
-> **推荐方式**：直接从 Release 页面下载完整安装包
+<https://www.qiaoqiaoyun.com/downloadCode>
 
-- GitHub Release：[https://github.com/jeecgboot/qiaoqiaoyun/releases](https://github.com/jeecgboot/qiaoqiaoyun/releases)
 
-#### 2.网盘下载（⭐推荐）
-
-直接通过 [百度网盘下载](https://pan.baidu.com/s/141_ugZIGfuiDw3t6GvyR1Q?pwd=gdkq)
-
-#### 3.Git LFS 克隆下载（繁琐）
-- Windows: 可以从 [Git LFS 的官方网站 ](https://git-lfs.github.com/)下载并安装。
-- macOS: 可以使用 Homebrew 安装，在终端中运行命令： `brew install git-lfs`
-- Linux: 可以使用包管理器安装，或者从 [Git LFS 的 GitHub 页面](https://github.com/git-lfs/git-lfs/releases) 下载二进制文件。
-
-> **原因**： qiaoqiaoyun-start-\*.jar采用Git LFS上传。直接git clone下载会发现 qiaoqiaoyun-start-\*.jar 只有 1 KB。
-
-安装Git LFS后，执行命令：
-```bash
-git clone https://gitee.com/jeecg/qiaoqiaoyun.git
-```
 
 本地快速部署
 -----------------------------------
