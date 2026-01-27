@@ -1,244 +1,253 @@
-English  |  [中文](./README.zh-CN.md)
+中文 | [English](./README.md)
 
-QiaoQiaoYun AI No-Code Platform
+敲敲云 AI零代码平台
 ===============
 
-Latest Version: 2.3.0 (Release Date: 2026-01-12) 
+最新版本： 2.3.0（发布日期：2026-01-12） 
 
 
-[![](https://img.shields.io/badge/Author-Beijing%20Guoju%20Information%20Technology%20Co.%2C%20Ltd.-orange.svg)](https://www.guojusoft.com)
+[![](https://img.shields.io/badge/Author-北京国炬信息技术有限公司-orange.svg)](https://www.guojusoft.com)
 [![](https://img.shields.io/badge/version-2.3.0-brightgreen.svg)](https://github.com/jeecgboot/qiaoqiaoyun)
 [![GitHub stars](https://img.shields.io/github/stars/jeecgboot/qiaoqiaoyun.svg?style=social&label=Stars)](https://github.com/jeecgboot/qiaoqiaoyun)
 [![GitHub forks](https://img.shields.io/github/forks/jeecgboot/qiaoqiaoyun.svg?style=social&label=Fork)](https://github.com/jeecgboot/qiaoqiaoyun)
-[![](https://img.shields.io/badge/blog-Free%20Low--Code%20Platform-orange.svg)](https://jeecg.com/download)
+[![](https://img.shields.io/badge/blog-免费低代码平台-orange.svg)](https://jeecg.com/download)
 
 
-On January 12, 2026, Qiaoqiao Cloud officially released its brand-new version v2.3.0! The biggest highlight of this release is that the platform is now permanently free, breaking the multiple limitations on the number of users, applications, and forms commonly found in traditional low-code platforms, achieving truly zero-threshold and zero-cost usage.
+2026年1月12日，敲敲云迎来了全新v2.3.0版本发布！此次版本最大亮点是平台正式宣布永久免费开放，打破传统零代码平台的用户数、应用数、表单数等多重限制，实现真正的零门槛、零成本使用。  
 
 
+#### 主要新特性包括：
 
-Project Introduction
+> 敲敲云作为业内唯一支持私有化部署且永久免费使用的企业级零代码平台，集成了领先的AI能力和丰富的业务引擎，帮助企业和个人用户快速搭建个性化业务系统，实现数字化转型和智能办公。
+
+* 强大的流程引擎支持审批、驳回、委派、跳转等丰富流程节点配置
+* 丰富的应用模板库，支持一键导入导出，极大缩短上线周期
+* 完善的API接口，支持与第三方系统无缝集成
+* 私有化部署保障企业数据安全与自主可控
+
+
+项目介绍
 -----------------------------------
-<h3 align="center">Free No-Code Platform</h3>
+<h3 align="center">免费的零代码平台</h3>
 
-QiaoQiaoYun is a **free AI-powered no-code platform** that helps enterprises quickly build business systems and AI applications! Users can create complex business systems through drag-and-drop without coding - build a CRM system in just 5 minutes!
-It integrates **no-code applications**, **AI application platform**, and **AI knowledge base**, helping enterprises quickly build personalized business applications, AI applications, AI knowledge bases, and AI chat assistants!
-QiaoQiaoYun has comprehensive **application building capabilities**, **form engine**, **workflow engine**, **dashboard engine**, and **large screen & reports**, meeting over 90% of enterprise business scenario requirements.
+敲敲云是一款 `完全免费` 的 **零代码应用搭建平台**，助力企业快速实现搭建业务系统和构建AI应用！用户无需编码，即可快速拖拽出复杂业务系统，5分钟可搭建一套CRM系统等！
+她集成了**零代码应用**、**AI应用平台**和**AI知识库**，可帮助企业快速搭建个性化业务应用 和 AI应用、AI知识库、AI聊天助手！
+敲敲云拥有完善的**应用搭建能力**、**表单引擎**、**流程引擎**、**仪表盘引擎**、**大屏&报表**，可满足企业90%以上的业务场景需求。
 
-- No coding required, build your graduation project in just 10 minutes with a foolproof process designed for college students!
-- Completely free with no limits on the number of users, apps, forms, dashboards, workflows, and more!
+- 无需编码，10分钟，让大学生傻瓜式搭建自己的毕业设计！
+- 完全免费，不限制用户数、应用数、表单数、仪表盘数、工作流等数量限制！
 
 ```
-🎯 Focus on open source, creating a "professional, easy-to-use, intelligent" enterprise-level AI no-code platform
-📜 Open Source License: Features are free, commercial use allowed, code not open-sourced
-🚀 Our Mission: Be the local alternative to Jiandaoyun/Mingdaoyun
-💡 Core Advantages: Private deployment support, full data control, permanently free to use
+🎯 专注于开源，打造 "专业 易用 智能" 的企业级AI零代码平台
+📜 开源协议：功能免费、可以商用、代码不开放
+🚀 我们的口号：做简道云/明道云本地化的平替产品
+💡 核心优势：支持私有化部署、数据自主可控、永久免费使用
 ```
 
 
 
-Download Deployment Package
+下载部署包
 -----------------------------------
 
-> If GitHub's network is unstable, prioritize downloading via Baidu Netdisk.
-
+> 如果github网络不好，优先通过百度网盘下载
 
 <https://www.qiaoqiaoyun.com/downloadCode>
 
 
-Local Quick Deployment
+
+本地快速部署
 -----------------------------------
 
-Installation Manual: https://help.qiaoqiaoyun.com/open/simpleStart.html
+安装手册：https://help.qiaoqiaoyun.com/open/simpleStart.html
 
-### 📝 Deployment Steps
+### 📝 部署步骤
 
 ```
-1. Environment Preparation
-   - Install JDK 8+ (JDK 17 recommended)
-   - Install MySQL 5.7+, MongoDB, Redis
+1. 环境准备
+   - 安装 JDK 8+（推荐 JDK 17）
+   - 安装 MySQL 5.7+、 Mongodb、redis
 
-2. Database Initialization
-   - Execute MySQL script: qiaoqiaoyun.sql (automatically creates database: qiaoqiaoyun)
-   - MongoDB does not require initialization
+2. 数据库初始化
+   - 执行 MySQL 脚本：qiaoqiaoyun.sql（自动创建数据库：qiaoqiaoyun）
+   - Mongodb不需要初始化
 
-3. Configuration Modification
-   - Edit the config/application-prod.yml configuration file
-   - Modify MySQL database, Redis and MongoDB configurations
+3. 配置修改
+   - 编辑 config/application-prod.yml 配置文件
+   - 修改Mysql数据库、Redis 和 MongoDB的配置
    
-4. Start Application
-   - Windows: Double-click start.bat
-   - Linux/macOS: Execute ./start.sh
+4. 启动应用
+   - Windows：双击 start.bat
+   - Linux/macOS：执行 ./start.sh
    
-5. Access System
-   - URL: http://localhost
-   - Account: admin
-   - Password: 123456
+5. 访问系统
+   - 地址：http://localhost
+   - 账号：admin
+   - 密码：123456
 ```
 
-> 💡 **Tips**:
-> - First startup may take 1-2 minutes, please be patient
-> - If port is occupied, modify the port number in the configuration file
+> 💡 **提示**：
+> - 首次启动可能需要 1-2 分钟，请耐心等待
+> - 如遇端口占用，可修改配置文件中的端口号
 
 
 
-Docker One-Click Installation
+Docker一键安装
 -----------------------------------
 
-- Docker One-Click Cloud Deployment: https://help.qiaoqiaoyun.com/open/dockerCloud.html
+- Docker一键云部署： https://help.qiaoqiaoyun.com/open/dockerCloud.html
 
 
 
-Technical Communication
+技术交流
 -----------------------------------
-- Official Website: https://www.qiaoqiaoyun.com
-- Online Demo: https://app.qiaoqiaoyun.com
-- User Manual: https://help.qiaoqiaoyun.com
-- QQ Group: 967780549
-- Technical Support: [Online Feedback Issues](https://github.com/jeecgboot/qiaoqiaoyun/issues/new)
+- 官方网站： https://www.qiaoqiaoyun.com
+- 在线体验： https://app.qiaoqiaoyun.com
+- 使用手册： https://help.qiaoqiaoyun.com
+- QQ交流群： 967780549
+- 技术支持： [在线反馈工单Issues](https://github.com/jeecgboot/qiaoqiaoyun/issues/new)
 
 
 
-🌟 Core Features
+🌟 核心特性
 -----------------------------------
-- **🤖 AI Intelligence**: Integrates mainstream large models like ChatGPT, DeepSeek, supports AI table creation, intelligent Q&A, workflow orchestration
-- **📊 Visual Design**: Drag-and-drop form design, process design, dashboard design, easy to get started even without coding experience
-- **🔄 Process Automation**: Powerful workflow engine supporting approval, filling, data processing (with Create, Delete, Update, Query nodes) for automated business processes and data modification capabilities
-- **📱 Multi-Platform**: Supports Web, APP, H5, DingTalk, WeChat Work and other multi-terminal access
-- **🔌 Open Integration**: Provides comprehensive API interfaces, supports seamless integration with third-party systems
-- **🏢 Private Deployment**: Supports local deployment, full data control, ensures enterprise data security
-- **📈 Data Visualization**: 20+ statistical charts, real-time business data display, assists decision analysis
-- **🎨 Application Templates**: Built-in rich industry application templates, supports one-click import for quick use
+- **🤖 AI智能赋能**：集成ChatGPT、DeepSeek等主流大模型，支持AI建表、智能问答、工作流编排
+- **📊 可视化设计**：拖拽式表单设计、流程设计、仪表盘设计，零代码基础也能快速上手
+- **🔄 流程自动化**：强大的流程引擎，支持审批、填写、数据处理(具备：增、删、改、查 流程节点)等自动化业务流转、通过流程改数据能力
+- **📱 多端适配**：支持Web、APP、H5、钉钉、企业微信等多终端访问
+- **🔌 开放集成**：提供完善的API接口，支持与第三方系统无缝对接
+- **🏢 私有化部署**：支持本地部署，数据完全自主可控，保障企业数据安全
+- **📈 数据可视化**：20+种统计图表，实时展示业务数据，辅助决策分析
+- **🎨 应用模板**：内置丰富的行业应用模板，支持一键导入快速使用
 
 
 
-#### Why Choose QiaoQiaoYun No-Code?
+#### 为什么选择 敲敲云零代码？
 
-- ✅ **Completely Free**: Core features permanently free, no hidden charges
-- ✅ **Private Deployment**: Full data control, meets enterprise security requirements
-- ✅ **Zero Coding Barrier**: Drag-and-drop to complete complex business system construction
-- ✅ **AI Intelligence Boost**: Integrates mainstream large models, improves development efficiency
-- ✅ **Rich Application Templates**: Covers multiple industry scenarios, ready to use out of the box
-- ✅ **Powerful Workflow Engine**: Supports complex business process automation
-- ✅ **Complete Technical Support**: Detailed documentation, active community, professional technical support
-
-
-
-
-### What Features Does QiaoQiaoYun Have?
-
-- 1. Application management functions, including creating applications, modifying applications, exiting/deleting applications, sorting applications, maintaining applications, application recycle bin, application grouping
-- 2. Worksheet management for data management, can display data like Excel spreadsheets, or as Kanban and calendar. In worksheets you can design form fields; add, edit, view, delete data, and share, print data, import and export.
-- 3. Worksheet view management, supports multiple views, create/copy views, personalized view configuration, view filtering, sorting, custom display fields, delete views, etc. Supports different style views: table view, calendar view, kanban view
-- 4. Powerful workflow engine supporting approval, filling, data processing (with Create, Delete, Update, Query workflow nodes) for automated business processes and data modification capabilities
-- 5. Calendar view: Display data in calendar form, data can be displayed on specific dates based on date fields. Default is monthly, can switch to weekly or daily mode to display data.
-- 6. Publish forms, supports configuring form publishing modes, providing to others for filling, for data collection
-- 7. Provides form designer with 40 types of controls for your use, basically meeting most of your business scenario needs, each control has different property configurations, choose different control types according to different needs
-- 8. Form designer supports complex controls, related records: can use related records when forms have associations with other forms; subtables for entering multiple subtable information in main table; grid layout: converts single column fields to multi-column display, meeting more needs
-- 9. Provides powerful function capabilities, form control default values support 35 system functions in four areas: mathematical functions, date functions, text functions, logical functions, basically meeting most scenario needs
-- 10. Provides dashboard designer for configuring portals and reports, different statistical charts, buttons, carousels, etc. can be designed in dashboards. Data is presented in visual form through various charts and graphics
+- ✅ **完全免费**：核心功能永久免费使用，无隐藏收费
+- ✅ **私有化部署**：数据完全自主可控，满足企业安全要求
+- ✅ **零代码门槛**：拖拽即可完成复杂业务系统搭建
+- ✅ **AI智能加持**：集成主流大模型，提升开发效率
+- ✅ **丰富的应用模板**：覆盖多个行业场景，开箱即用
+- ✅ **强大的流程引擎**：支持复杂业务流程自动化
+- ✅ **完善的技术支持**：详细文档、活跃社区、专业技术支持
 
 
 
-**Video Introduction**
+
+### 敲敲云有什么功能？
+
+- 1.应用管理功能， 应用的基础操作包含创建应用、修改应用、退出/删除应用、排序应用、维护应用、应用回收站、应用分组
+- 2.工作表管理，用来管理数据 可以像excel表格一样展示数据，也可以像看板和日历一样展示数据。在工作表中可以设计表单字段；可以添加、编辑、查看、删除数据，也可以分享、打印数据、导入导出。
+- 3.工作表视图管理，支持多视图，新建复制视图，视图个性化配置、视图过滤，排序、自定义显示字段，删除视图等，支持不同风格视图：表格视图、日历视图、看板视图
+- 4.强大的流程引擎，支持审批、填写、数据处理(具备：增、删、改、查 流程节点)等自动化业务流转、通过流程改数据能力
+- 5.日历视图： 以日历形式展示数据，可根据日期字段将数据展示在具体日期中。默认为月，可切换为周、日模式来展示数据。
+- 6.发布表单，支持配置表单发布模式，提供给其他人填写，进行数据采集
+- 7.提供表单设计器，拥有40种控件类型供您使用，基本满足您的大部分的业务场景需求，每个控件都拥有不同的属性配置，根据不同的需求选择不同的控件类型
+- 8.表单设计器支持复杂控件，关联记录： 在表单中与其他表单有关联时可以使用关联记录；子表，用于主表中录入多条子表信息；栅格布局： 将一行一列的字段转换成一行多列显示，满足更多的需求；
+- 9.提供强大的函数能力，表单控件默认值支持35种系统函数，分别在数学函数、日期函数、文本函数、逻辑函数四个区域内，基本满足大部分场景需求
+- 10.提供仪表盘设计器，用于配置门户和报表，在仪表盘中可以设计不同的统计图表，按钮、轮播图等。将数据以各类图表和图形化的方式，以视觉形式来呈现
+
+
+
+**视频介绍**
 
 [![](https://upload.jeecg.com/jeecg/qiaoqiaoyunsite/qqyunvideo.png)](https://www.bilibili.com/video/BV1jUQeYfEM2)
 
 
 
-QiaoQiaoYun Typical Application Scenarios
+敲敲云典型应用场景
 -----------------------------------
 
-**1. 🔄 Digital Transformation**
-- Help traditional enterprises transform from paper-based to digital office
-- Lower digitalization barriers, reduce development costs
-- Quickly respond to business changes, flexibly adjust system functions
+**1. 🔄 数字化转型**
+- 帮助传统企业实现纸质化办公向数字化转型
+- 降低数字化门槛，减少开发成本
+- 快速响应业务变化，灵活调整系统功能
 
 
-**2. 📝 Data Collection & Management**
-- Replace traditional Excel, build professional data collection systems
-- Support work order management, customer information registration, questionnaire surveys, etc.
-- Real-time data statistics and analysis, automatically generate visual reports
+**2. 📝 数据采集与管理**
+- 替代传统Excel，搭建专业的数据采集系统
+- 支持工单管理、客户信息登记、问卷调查等场景
+- 数据实时统计分析，自动生成可视化报表
 
-**3. 💻 Business System Construction**
-- **CRM Customer Relationship Management**: Customer information, sales follow-up, opportunity management
-- **Purchase, Sales & Inventory System**: Purchase management, inventory management, sales management
-- **OA Office System**: Approval processes, attendance management, asset management
-- **Financial Management System**: Reimbursement approval, expense management, financial reports
-- **Project Management System**: Task management, project progress, resource allocation
-- **MIS Management Information System**: Various customized enterprise management systems
+**3. 💻 业务系统搭建**
+- **CRM客户关系管理**：客户信息、销售跟进、商机管理
+- **进销存系统**：采购管理、库存管理、销售管理
+- **OA办公系统**：审批流程、考勤管理、资产管理
+- **财务管理系统**：报销审批、费用管理、财务报表
+- **项目管理系统**：任务管理、项目进度、资源分配
+- **MIS管理信息系统**：各类企业定制化管理系统
 
-**4. 🎨 Rapid Prototype Design**
-- Quickly build prototype systems at customer sites, demonstrate effects instantly
-- No professional development skills required, drag-and-drop to complete system design
-- Support rapid iteration adjustments, respond to requirement changes in real-time
+**4. 🎨 快速原型设计**
+- 在客户现场快速搭建原型系统，即时演示效果
+- 无需专业开发技能，拖拽即可完成系统设计
+- 支持快速迭代调整，实时响应需求变化
 
-**5. 📦 Application Template Trading**
-- Build general business applications and export as templates
-- Support quick import and export of application templates
-- Can be traded and distributed as digital products
+**5. 📦 应用模板交易**
+- 搭建通用业务应用并导出为模板
+- 支持应用模板的快速导入导出
+- 可作为数字产品进行交易和分发
 
-**6. 🎓 Education & Training Scenarios**
-- Quick construction of graduation design systems
-- Teaching demonstration and training platforms
-- Complete projects without deep programming foundations
-
-
+**6. 🎓 教育培训场景**
+- 毕业设计系统快速搭建
+- 教学演示和实训平台
+- 无需深厚编程基础即可完成作品
 
 
 
-📖 Advanced Features
+
+
+📖 高级功能说明
 -----------------------------------
 
-### Related Records and Workflow Application Practice
+### 关联记录与工作流应用实践
 
-QiaoQiaoYun platform provides powerful **related record controls**, **calculation controls**, **function expressions**, and **workflow engine** to build intelligent business systems.
+敲敲云平台提供了强大的**关联记录控件**、**计算控件**、**函数表达式**和**工作流引擎**，可以构建智能化的业务系统。
 
-#### 🔗 Core Technology Components
+#### 🔗 核心技术组件
 
-- **Related Record Control**: Implement cross-table data association, avoid duplicate entry
-- **Calculation Control**: Automatic field calculation, reduce human errors
-- **Function Expression**: Complex logic judgment and data processing
-- **Workflow Engine**: Drive business automation flow
+- **关联记录控件**：实现跨表数据关联，避免重复录入
+- **计算控件**：字段自动计算，减少人为错误
+- **函数表达式**：复杂逻辑判断和数据处理
+- **工作流引擎**：驱动业务自动化流转
 
-#### 💼 Typical Application Scenarios
+#### 💼 典型应用场景
 
-**Scenario 1: Purchase Order Automatically Generates Payable**
+**场景一：采购单自动生成应收款单**
 ```
-Purchase Order (related to supplier/product) → Automatic amount calculation → Workflow trigger → Automatically generate payable
-```
-
-**Scenario 2: Inbound Order Automatically Updates Inventory**
-```
-Inbound Order (related to product) → Calculate inbound quantity → Workflow trigger → Automatically update inventory quantity
+采购单（关联供应商/产品） → 自动计算金额 → 工作流触发 → 自动生成应收款单
 ```
 
-#### 🛠️ Workflow Node Description
+**场景二：入库单自动更新库存**
+```
+入库单（关联产品） → 计算入库数量 → 工作流触发 → 自动更新库存数量
+```
 
-| Node Type | Function | Use Case |
+#### 🛠️ 工作流节点说明
+
+| 节点类型 | 功能说明 | 使用场景 |
 |----------|----------|----------|
-| Create | Create record | Automatically generate documents, create inventory records |
-| Query | Query data | Check data existence, get basic information |
-| Update | Update record | Inventory accumulation, status update |
-| Loop | Batch processing | Traverse detail lines, batch operations |
+| 增（Create） | 新建记录 | 自动生成单据、创建库存记录 |
+| 查（Query） | 查询数据 | 检查数据存在性、获取基础信息 |
+| 改（Update） | 更新记录 | 库存累加、状态更新 |
+| 循环（Loop） | 批量处理 | 遍历明细行、批量操作 |
 
-#### 📈 Business Value
+#### 📈 业务价值
 
-- 🔗 **Data Interconnection**: Break information silos, achieve automatic data association
-- 🤖 **Automatic Calculation**: Reduce manual errors, improve data accuracy
-- ⚡ **Process Automation**: Eliminate repetitive operations, improve business efficiency
-- 📊 **Real-time Update**: Inventory and financial data sync in real-time
-- 🔄 **Business Closed Loop**: Complete automated business process
+- 🔗 **数据互联**：打破信息孤岛，实现数据自动关联
+- 🤖 **自动计算**：减少手工错误，提高数据准确性
+- ⚡ **流程自动化**：消除重复操作，提升业务效率
+- 📊 **实时更新**：库存、财务数据实时同步
+- 🔄 **业务闭环**：完整的自动化业务流程
 
-> 📋 **Complete Guide**: For detailed practice guide, please refer to [Related Records and Workflow Application.md](./关联记录与工作流应用.md)
-
-
+> 📋 **完整指南**：详细的实践指南请参考 [关联记录与工作流应用.md](./关联记录与工作流应用.md)
 
 
 
-#### Platform Features
 
-##### Application Management
+
+#### 平台功能效果
+
+##### 应用管理
 
 ![](https://oscimg.oschina.net/oscnet/up-59b983dedd8c43f7ea5b784b1584e0a6704.png)
 
@@ -253,57 +262,56 @@ Inbound Order (related to product) → Calculate inbound quantity → Workflow t
 
 
 
-##### Form Engine
+##### 表单引擎
 
-> Visual drag-and-drop design, rich controls easily meet daily business needs, no professional knowledge required to drag components, like building blocks, easily complete form creation, start data collection work in one minute.
+> 可视化拖拽设计，控件丰富轻松满足日常业务需求，不需要任何的专业知识拖动组件，像搭积木一样，轻松完成表单的创建，一分钟开始数据收集的工作。
 
-Supports custom form views, form views support table, kanban, and calendar styles
+支持自定义表单视图，表单视图支持表格、看板、日历风格
 
 
 ![](https://oscimg.oschina.net/oscnet/up-42541410a7eaccadd1caf2025e1251a0b26.png)
 
 
-Over 40 rich form controls
+40多种丰富表单控件
 
 ![](https://oscimg.oschina.net/oscnet/up-655d3f41e89000fecb55693b64ea155596a.png)
 
-Form engine has rich layout options
+表单引擎拥有丰富布的局方式
 
 ![](https://oscimg.oschina.net/oscnet/up-60ed5b69aa79649bd46682e00d3f3faac36.png)
 
-##### Dashboard
+##### 仪表盘
 
-> Achieves various chart data visualization presentations, charts, buttons, rich text, carousels, embedded URLs can all be configured
+> 实现了多种图表数据可视化的展现，图表、按钮、富文本、轮播图、嵌入URL皆可配置
 
 ![](https://oscimg.oschina.net/oscnet/up-ac3f164e60439357fab80fb02fde550d61d.png)
 
-Design Interface
+设计界面
 ![](https://oscimg.oschina.net/oscnet/up-18cd5e9ee2e74d995b2a9e54aaae8f3fbd9.png)
 
 
-Over 20 rich statistical charts
+20多种丰富统计图表
 
 
 ![](https://oscimg.oschina.net/oscnet/up-1ece674f91da3ebe2854cfcf68bf69d7725.png)
+##### 移动端APP
 
-##### Mobile APP
-
-APP, H5, DingTalk mobile access anytime, anywhere
+APP、H5、钉钉移动端随时随地可操作
 
 ![](https://oscimg.oschina.net/oscnet/up-68eb5541d5f0d9906c059f32851e877fe6e.png)
 
-##### Workflow Engine
+##### 流程引擎
 
-> Visual workflow drag-and-drop design, simpler and more suitable for Chinese national conditions, supports arbitrary rejection, delegation, jumping. Can achieve approval, filling, data processing and other workflow approvals and business processing, automatic flow.
+> 可视化流程拖拽设计、更加简单，更符合中国国情的流程引擎，任意驳回、委派、跳转。可实现审批、填写、数据处理等流程审批和业务处理，自动流转。
 
-Beautiful design interface, smooth user experience
+设计界面美观，用户使用体验流畅
 
 ![](https://oscimg.oschina.net/oscnet/up-a867e27f5463bc79a273846be957770fac8.png)
 
-25 rich workflow nodes
+25种丰富的流程节点
 
 ![](https://oscimg.oschina.net/oscnet/up-8068a15d1c0e07dd6982cbacda66bcdc1be.png)
 
-Rich node configuration, can set different approvers, permissions and advanced configurations
+节点配置丰富，可设置不同审批人，权限和高级配置
 
 ![](https://oscimg.oschina.net/oscnet/up-5d6f0aa7275eba273a2777218cf3625385f.png)
