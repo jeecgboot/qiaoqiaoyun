@@ -37,13 +37,28 @@ QiaoQiaoYun has comprehensive **application building capabilities**, **form engi
 
 
 
-Download Deployment Package
------------------------------------
 
-> If GitHub's network is unstable, prioritize downloading via Baidu Netdisk.
+#### 1. Download via Release (⭐Recommended)
 
+> **Recommended Method**: Download the complete installation package directly from the Release page
 
-<https://www.qiaoqiaoyun.com/downloadCode>
+- GitHub Release: [https://github.com/jeecgboot/qiaoqiaoyun/releases](https://github.com/jeecgboot/qiaoqiaoyun/releases)
+
+#### 2. Cloud Drive Download (⭐Recommended)
+
+Download directly via [Baidu Cloud Drive](https://pan.baidu.com/s/141_ugZIGfuiDw3t6GvyR1Q?pwd=gdkq)
+
+#### 3. Git LFS Clone Download (Complicated)
+- Windows: Download and install from [Git LFS official website](https://git-lfs.github.com/)
+- macOS: Install using Homebrew, run command in terminal: `brew install git-lfs`
+- Linux: Install using package manager, or download binary files from [Git LFS GitHub page](https://github.com/git-lfs/git-lfs/releases)
+
+> **Note**: qiaoqiaoyun-start-\*.jar is uploaded using Git LFS. Direct git clone will result in qiaoqiaoyun-start-\*.jar being only 1 KB.
+
+After installing Git LFS, execute the command:
+```bash
+git clone https://gitee.com/jeecg/qiaoqiaoyun.git
+```
 
 
 Local Quick Deployment
