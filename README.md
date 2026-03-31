@@ -29,7 +29,7 @@
 
 - [快速开始](#快速开始)
   - [一键命令安装（推荐）](#一键命令安装推荐)
-  - [Docker 部署](#docker-部署)
+  - [Docker 一键安装](#docker-一键安装)
   - [手动部署](#手动部署)
   - [下载部署包](#下载部署包)
 - [核心特性](#核心特性)
@@ -82,9 +82,9 @@ kill $(cat /opt/qiaoqiaoyun/qqyun.pid)
 cd /opt/qiaoqiaoyun && nohup bash start.sh >> qqyun.log 2>&1 &
 ```
 
-### Docker 部署
+### Docker 一键安装
 
-已安装 Docker 的服务器，一条命令即可启动敲敲云，自动拉取镜像并通过 Docker Compose 编排部署。
+一条命令即可启动敲敲云，自动安装 Docker 环境、拉取镜像并通过 Docker Compose 编排部署。
 
 **Linux / macOS（推荐）**
 
@@ -92,7 +92,7 @@ cd /opt/qiaoqiaoyun && nohup bash start.sh >> qqyun.log 2>&1 &
 curl -fsSL https://www.qiaoqiaoyun.com/docker-install.sh | bash
 ```
 
-> 需已安装 Docker 和 Docker Compose，支持 TencentOS、OpenCloudOS、Alibaba Cloud Linux、CentOS 等主流发行版。
+> 自动安装 Docker 和 Docker Compose，支持 TencentOS、OpenCloudOS、Alibaba Cloud Linux、CentOS 等主流发行版。
 
 **部署完成后**
 
