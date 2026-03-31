@@ -124,39 +124,17 @@ docker compose -f /opt/qiaoqiaoyun-docker/docker-compose.yml up -d
 
 ### 手动部署
 
-安装手册：https://help.qiaoqiaoyun.com/open/simpleStart.html
-
-#### 下载部署包
-
-- **网盘下载（推荐）**：[百度网盘下载](https://pan.baidu.com/s/141_ugZIGfuiDw3t6GvyR1Q?pwd=gdkq)
-- **Release 下载（推荐）**：[GitHub Release](https://github.com/jeecgboot/qiaoqiaoyun/releases)
-
-#### 部署步骤
+下载部署包：[百度网盘](https://pan.baidu.com/s/141_ugZIGfuiDw3t6GvyR1Q?pwd=gdkq) | [GitHub Release](https://github.com/jeecgboot/qiaoqiaoyun/releases)
 
 ```
-1. 环境准备
-   - 安装 JDK 8+（推荐 JDK 17）
-   - 安装 MySQL 5.7+、MongoDB、Redis
-
-2. 数据库初始化
-   - 执行 MySQL 脚本：qiaoqiaoyun.sql（自动创建数据库：qiaoqiaoyun）
-   - MongoDB 不需要初始化
-
-3. 配置修改
-   - 编辑 config/application-prod.yml 配置文件
-   - 修改 MySQL 数据库、Redis 和 MongoDB 的配置
-
-4. 启动应用
-   - Windows：双击 start.bat
-   - Linux/macOS：执行 ./start.sh
-
-5. 访问系统
-   - 地址：http://localhost
-   - 账号：admin
-   - 密码：123456
+1. 安装 JDK 8+（推荐 JDK 17）、MySQL 5.7+、MongoDB、Redis
+2. 执行 MySQL 脚本 qiaoqiaoyun.sql 初始化数据库
+3. 编辑 config/application-prod.yml，配置 MySQL、Redis、MongoDB 连接信息
+4. 启动：Windows 双击 start.bat / Linux 执行 ./start.sh
+5. 访问 http://localhost，账号 admin / 密码 123456
 ```
 
-> 💡 首次启动可能需要 1-2 分钟，如遇端口占用可修改配置文件中的端口号。
+> 详细步骤参考 [安装手册](https://help.qiaoqiaoyun.com/open/simpleStart.html)
 
 ---
 
