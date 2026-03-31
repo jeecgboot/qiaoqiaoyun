@@ -130,11 +130,6 @@ docker compose -f /opt/qiaoqiaoyun-docker/docker-compose.yml up -d
 
 - **网盘下载（推荐）**：[百度网盘下载](https://pan.baidu.com/s/141_ugZIGfuiDw3t6GvyR1Q?pwd=gdkq)
 - **Release 下载（推荐）**：[GitHub Release](https://github.com/jeecgboot/qiaoqiaoyun/releases)
-- **Git LFS 克隆下载**：仓库中的 qiaoqiaoyun-start-\*.jar 采用 Git LFS 上传，直接 `git clone` 下载会发现 jar 文件只有 1 KB，需先安装 Git LFS：
-  - **Windows**：从 [Git LFS 官网](https://git-lfs.github.com/) 下载安装
-  - **macOS**：`brew install git-lfs`
-  - **Linux**：使用包管理器安装，或从 [Git LFS GitHub](https://github.com/git-lfs/git-lfs/releases) 下载
-  - 安装后执行：`git clone https://gitee.com/jeecg/qiaoqiaoyun.git`
 
 #### 部署步骤
 
