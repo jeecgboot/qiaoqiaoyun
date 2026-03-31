@@ -94,14 +94,6 @@ curl -fsSL https://www.qiaoqiaoyun.com/docker-install.sh | bash
 
 > 需已安装 Docker 和 Docker Compose，支持 TencentOS、OpenCloudOS、Alibaba Cloud Linux、CentOS 等主流发行版。
 
-**Windows PowerShell（管理员）**
-
-```powershell
-irm https://www.qiaoqiaoyun.com/docker-install.ps1 | iex
-```
-
-> 需已安装 Docker Desktop，请以管理员身份运行 PowerShell。
-
 **部署完成后**
 
 | 项目 | 值 |
