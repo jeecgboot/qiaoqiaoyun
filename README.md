@@ -31,7 +31,6 @@
   - [一键命令安装（推荐）](#一键命令安装推荐)
   - [Docker 一键安装](#docker-一键安装)
   - [手动部署](#手动部署)
-  - [下载部署包](#下载部署包)
 - [核心特性](#核心特性)
 - [功能清单](#功能清单)
 - [典型应用场景](#典型应用场景)
@@ -127,6 +126,18 @@ docker compose -f /opt/qiaoqiaoyun-docker/docker-compose.yml up -d
 
 安装手册：https://help.qiaoqiaoyun.com/open/simpleStart.html
 
+#### 下载部署包
+
+- **网盘下载（推荐）**：[百度网盘下载](https://pan.baidu.com/s/141_ugZIGfuiDw3t6GvyR1Q?pwd=gdkq)
+- **Release 下载（推荐）**：[GitHub Release](https://github.com/jeecgboot/qiaoqiaoyun/releases)
+- **Git LFS 克隆下载**：仓库中的 qiaoqiaoyun-start-\*.jar 采用 Git LFS 上传，直接 `git clone` 下载会发现 jar 文件只有 1 KB，需先安装 Git LFS：
+  - **Windows**：从 [Git LFS 官网](https://git-lfs.github.com/) 下载安装
+  - **macOS**：`brew install git-lfs`
+  - **Linux**：使用包管理器安装，或从 [Git LFS GitHub](https://github.com/git-lfs/git-lfs/releases) 下载
+  - 安装后执行：`git clone https://gitee.com/jeecg/qiaoqiaoyun.git`
+
+#### 部署步骤
+
 ```
 1. 环境准备
    - 安装 JDK 8+（推荐 JDK 17）
@@ -151,29 +162,6 @@ docker compose -f /opt/qiaoqiaoyun-docker/docker-compose.yml up -d
 ```
 
 > 💡 首次启动可能需要 1-2 分钟，如遇端口占用可修改配置文件中的端口号。
-
-### 下载部署包
-
-#### 1. 网盘下载（推荐）
-
-直接通过 [百度网盘下载](https://pan.baidu.com/s/141_ugZIGfuiDw3t6GvyR1Q?pwd=gdkq)
-
-#### 2. 通过 Release 下载（推荐）
-
-直接从 Release 页面下载完整安装包：[GitHub Release](https://github.com/jeecgboot/qiaoqiaoyun/releases)
-
-#### 3. Git LFS 克隆下载
-
-> qiaoqiaoyun-start-\*.jar 采用 Git LFS 上传，直接 `git clone` 下载会发现 jar 文件只有 1 KB，需先安装 Git LFS。
-
-- **Windows**：从 [Git LFS 官网](https://git-lfs.github.com/) 下载安装
-- **macOS**：`brew install git-lfs`
-- **Linux**：使用包管理器安装，或从 [Git LFS GitHub](https://github.com/git-lfs/git-lfs/releases) 下载
-
-安装 Git LFS 后执行：
-```bash
-git clone https://gitee.com/jeecg/qiaoqiaoyun.git
-```
 
 ---
 
