@@ -90,6 +90,13 @@ cd /opt/qiaoqiaoyun && nohup bash start.sh >> qqyun.log 2>&1 &
 > ⚠️ 脚本需要 **root 权限**（Linux）或 **管理员权限**（Windows）运行，已安装的组件会自动跳过，支持重复运行。
 
 
+Docker一键安装
+-----------------------------------
+
+- Docker一键云部署： https://help.qiaoqiaoyun.com/open/dockerCloud.html
+
+
+
 下载部署包
 -----------------------------------
 #### 1.网盘下载（⭐推荐）
@@ -148,13 +155,6 @@ git clone https://gitee.com/jeecg/qiaoqiaoyun.git
 > 💡 **提示**：
 > - 首次启动可能需要 1-2 分钟，请耐心等待
 > - 如遇端口占用，可修改配置文件中的端口号
-
-
-
-Docker一键安装
------------------------------------
-
-- Docker一键云部署： https://help.qiaoqiaoyun.com/open/dockerCloud.html
 
 
 
