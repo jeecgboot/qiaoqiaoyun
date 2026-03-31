@@ -43,21 +43,17 @@
 
 ## 快速开始
 
-### 一键安装（推荐）
+### 一键命令安装（推荐）
 
-一条命令完成环境安装 + 应用部署，全新安装约需 **3 分钟**。
+只需一条命令，自动完成环境检测、依赖安装和应用部署，全新安装约需 **3 分钟**。
 
-**Linux**
+**Linux / macOS**
 
 ```bash
 curl -fsSL https://www.qiaoqiaoyun.com/install.sh | bash
 ```
 
-**Windows PowerShell（管理员）**
-
-```powershell
-irm https://www.qiaoqiaoyun.com/install.ps1 | iex
-```
+> 支持 TencentOS、Alibaba Cloud Linux、CentOS Stream、Anolis OS、OpenCloudOS、Rocky Linux、RHEL 8+、CentOS 8+ 等 RHEL 系发行版，需 root 权限。
 
 **部署完成后**
 
@@ -66,6 +62,14 @@ irm https://www.qiaoqiaoyun.com/install.ps1 | iex
 | 访问地址 | `http://<服务器IP>` |
 | 默认账号 | `admin` |
 | 默认密码 | `123456` |
+| 安装耗时 | 约 3 分钟 |
+
+**安装前请确认：**
+
+- 开放 80 端口（防火墙）：`firewall-cmd --zone=public --add-port=80/tcp --permanent && firewall-cmd --reload`
+- 开放 80 端口（云安全组）：在云服务器控制台的安全组/网络ACL中放行入方向 TCP 80 端口
+
+**常用命令：**
 
 ```bash
 # 查看日志
@@ -78,17 +82,54 @@ kill $(cat /opt/qiaoqiaoyun/qqyun.pid)
 cd /opt/qiaoqiaoyun && nohup bash start.sh >> qqyun.log 2>&1 &
 ```
 
-**支持的系统**
+### Docker 部署
 
-- **RHEL 系**：CentOS 7/8/9、RHEL、Rocky Linux、AlmaLinux、TencentOS、OpenEuler、Anolis
-- **Debian 系**：Ubuntu 20.04+、Debian 11+
-- **Windows**：Windows 10/11、Windows Server 2016+
+已安装 Docker 的服务器，一条命令即可启动敲敲云，自动拉取镜像并通过 Docker Compose 编排部署。
 
-> ⚠️ 脚本需要 **root 权限**（Linux）或 **管理员权限**（Windows）运行，已安装的组件会自动跳过，支持重复运行。
+**Linux / macOS（推荐）**
 
-### Docker 安装
+```bash
+curl -fsSL https://www.qiaoqiaoyun.com/docker-install.sh | bash
+```
 
-Docker 一键云部署：https://help.qiaoqiaoyun.com/open/dockerCloud.html
+> 需已安装 Docker 和 Docker Compose，支持 TencentOS、OpenCloudOS、Alibaba Cloud Linux、CentOS 等主流发行版。
+
+**Windows PowerShell（管理员）**
+
+```powershell
+irm https://www.qiaoqiaoyun.com/docker-install.ps1 | iex
+```
+
+> 需已安装 Docker Desktop，请以管理员身份运行 PowerShell。
+
+**部署完成后**
+
+| 项目 | 值 |
+|------|-----|
+| 访问地址 | `http://<服务器IP>` |
+| 默认账号 | `admin` |
+| 默认密码 | `123456` |
+| 容器管理 | `docker compose` |
+
+**安装前请确认：**
+
+- 开放 80 端口（防火墙）：`firewall-cmd --zone=public --add-port=80/tcp --permanent && firewall-cmd --reload`
+- 开放 80 端口（云安全组）：在云服务器控制台的安全组/网络ACL中放行入方向 TCP 80 端口
+
+**常用命令：**
+
+```bash
+# 查看日志
+docker compose -f /opt/qiaoqiaoyun-docker/docker-compose.yml logs -f
+
+# 停止服务
+docker compose -f /opt/qiaoqiaoyun-docker/docker-compose.yml down
+
+# 启动服务
+docker compose -f /opt/qiaoqiaoyun-docker/docker-compose.yml up -d
+```
+
+> 如自动化脚本安装不成功，可参考 [Docker 手工部署文档](https://help.qiaoqiaoyun.com/open/dockerCloud.html)，通过 Docker Compose 手动完成部署。
 
 ### 手动部署
 
