@@ -45,6 +45,51 @@
 ```
 
 
+一键安装（⭐最快捷）
+-----------------------------------
+
+一条命令完成环境安装 + 应用部署，全新安装约需 3 分钟。
+
+#### Linux
+
+```bash
+curl -fsSL https://www.qiaoqiaoyun.com/install.sh | bash
+```
+
+#### Windows PowerShell（管理员）
+
+```powershell
+irm https://www.qiaoqiaoyun.com/install.ps1 | iex
+```
+
+#### 部署完成后
+
+| 项目 | 值 |
+|------|-----|
+| 访问地址 | `http://<服务器IP>` |
+| 默认账号 | `admin` |
+| 默认密码 | `123456` |
+
+```bash
+# 查看日志
+tail -f /opt/qiaoqiaoyun/qqyun.log
+
+# 停止服务
+kill $(cat /opt/qiaoqiaoyun/qqyun.pid)
+
+# 启动服务
+cd /opt/qiaoqiaoyun && nohup bash start.sh >> qqyun.log 2>&1 &
+```
+
+#### 支持的系统
+
+- **RHEL 系**: CentOS 7/8/9, RHEL, Rocky Linux, AlmaLinux, TencentOS, OpenEuler, Anolis
+- **Debian 系**: Ubuntu 20.04+, Debian 11+
+- **Windows**: Windows 10/11, Windows Server 2016+
+
+> ⚠️ 脚本需要 **root 权限**（Linux）或 **管理员权限**（Windows）运行，已安装的组件会自动跳过，支持重复运行。
+
+
 下载部署包
 -----------------------------------
 #### 1.网盘下载（⭐推荐）
