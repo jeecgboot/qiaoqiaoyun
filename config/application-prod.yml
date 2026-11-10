@@ -1,5 +1,6 @@
+# 支持通过环境变量传参（docker run -e / docker-compose environment），格式 ${变量名:默认值}，不传则用默认值
 server:
-  port: 80
+  port: ${SERVER_PORT:80}
   tomcat:
     max-swallow-size: -1
   error:
@@ -31,9 +32,9 @@ spring:
       max-file-size: 20MB
       max-request-size: 20MB
   mail:
-    host: smtp.163.com
-    username: jeecgos@163.com
-    password: ??
+    host: ${MAIL_HOST:smtp.163.com}
+    username: ${MAIL_USERNAME:jeecgos@163.com}
+    password: ${MAIL_PASSWORD:??}
     properties:
       mail:
         smtp:
@@ -123,20 +124,20 @@ spring:
           slow-sql-millis: 5000
       datasource:
         master:
-          url: jdbc:mysql://127.0.0.1:3306/qiaoqiaoyun?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
-          username: root
-          password: root
+          url: jdbc:mysql://${MYSQL_HOST:127.0.0.1}:${MYSQL_PORT:3306}/${MYSQL_DATABASE:qiaoqiaoyun}?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
+          username: ${MYSQL_USERNAME:root}
+          password: ${MYSQL_PASSWORD:root}
           driver-class-name: com.mysql.cj.jdbc.Driver
   #redis 配置
   redis:
-    database: 1
-    host: 127.0.0.1
-    port: 6379
-    password: ''
+    database: ${REDIS_DATABASE:1}
+    host: ${REDIS_HOST:127.0.0.1}
+    port: ${REDIS_PORT:6379}
+    password: ${REDIS_PASSWORD:}
   #mongodb
   data:
     mongodb:
-      uri: mongodb://admin:123456@127.0.0.1:27017/qiaoqiaoyun
+      uri: "${MONGODB_URI:mongodb://admin:123456@127.0.0.1:27017/qiaoqiaoyun}"
       print: true
       slowQuery: true
       slowTime: 1000
@@ -162,36 +163,36 @@ jeecg:
     # 低代码开发模式（dev:开发模式，prod:发布模式——关闭所有在线开发配置能力）
     lowCodeMode: dev
   # 签名密钥串(前后端要一致，正式发布请自行修改)
-  signatureSecret: dd05f1c54d63749eda95f9fa6d49v442a
+  signatureSecret: ${JEECG_SIGNATURE_SECRET:dd05f1c54d63749eda95f9fa6d49v442a}
   #签名拦截接口
   signUrls: /sys/dict/getDictItems/*,/sys/dict/loadDict/*,/sys/dict/loadDictOrderByValue/*,/sys/dict/loadDictItem/*,/sys/dict/loadTreeData,/sys/api/queryTableDictItemsByCode,/sys/api/queryFilterTableDictInfo,/sys/api/queryTableDictByKeys,/sys/api/translateDictFromTable,/sys/api/translateDictFromTableByKeys
   # 本地：local\Minio：minio\阿里云：alioss
-  uploadType: local
+  uploadType: ${JEECG_UPLOAD_TYPE:local}
   # 前端访问地址
   domainUrl:
-    pc: http://localhost:3100
-    app: http://localhost:8051
+    pc: "${JEECG_DOMAIN_URL_PC:http://localhost:3100}"
+    app: "${JEECG_DOMAIN_URL_APP:http://localhost:8051}"
   path:
-    upload: /opt/upFiles
-    webapp: /opt/webapp
+    upload: ${JEECG_PATH_UPLOAD:/opt/upFiles}
+    webapp: ${JEECG_PATH_WEBAPP:/opt/webapp}
   shiro:
     excludeUrls: /test/jeecgDemo/demo3,/test/jeecgDemo/redisDemo/**,/bigscreen/category/**,/bigscreen/visual/**,/bigscreen/map/**,/jmreport/bigscreen2/**
   #阿里云oss存储和大鱼短信秘钥配置
   oss:
-    accessKey: ??
-    secretKey: ??
-    endpoint: oss-cn-beijing.aliyuncs.com
-    bucketName: jeecgdev
+    accessKey: ${OSS_ACCESS_KEY:??}
+    secretKey: ${OSS_SECRET_KEY:??}
+    endpoint: ${OSS_ENDPOINT:oss-cn-beijing.aliyuncs.com}
+    bucketName: ${OSS_BUCKET_NAME:jeecgdev}
     # 短信模板
     sms-template:
       # 签名
-      signature:
+      signature: ${SMS_SIGNATURE:}
       # 模板code
       templateCode:
         # 登录短信、忘记密码模板编码
-        SMS_175435174:
+        SMS_175435174: ${SMS_TEMPLATE_LOGIN:}
         # 修改密码短信模板编码
-        SMS_465391221:
+        SMS_465391221: ${SMS_TEMPLATE_UPDATE_PASSWORD:}
   elasticsearch:
     cluster-name: jeecg-ES
     cluster-nodes: 127.0.0.1:9200
@@ -204,15 +205,15 @@ jeecg:
     upload-type: system
     map:
       # 配置百度地图的AK，申请地址：https://lbs.baidu.com/apiconsole/key?application=key#/home
-      baidu: ??
+      baidu: ${BAIDU_MAP_AK:??}
   # 在线预览文件服务器地址配置
-  file-view-domain: https://fileview.jeecg.com
+  file-view-domain: "${JEECG_FILE_VIEW_DOMAIN:https://fileview.jeecg.com}"
   # minio文件上传
   minio:
-    minio_url: http://minio.jeecg.com
-    minio_name: ??
-    minio_pass: ??
-    bucketName: otatest
+    minio_url: "${MINIO_URL:http://minio.jeecg.com}"
+    minio_name: ${MINIO_NAME:??}
+    minio_pass: ${MINIO_PASS:??}
+    bucketName: ${MINIO_BUCKET_NAME:otatest}
   #大屏报表参数设置
   jmreport:
     #多租户模式，默认值为空(created:按照创建人隔离、tenant:按照租户隔离) (v1.6.2+ 大屏和积木报表都采用这个规则)
@@ -230,8 +231,8 @@ jeecg:
       - 40
   #分布式锁配置
   redisson:
-    address: 127.0.0.1:6379
-    password:
+    address: "${REDIS_HOST:127.0.0.1}:${REDIS_PORT:6379}"
+    password: ${REDIS_PASSWORD:}
     type: STANDALONE
     enabled: true
 #cas单点登录
@@ -248,25 +249,25 @@ knife4j:
     password: jeecg1314
 #第三方登录
 justauth:
-  enabled: true
+  enabled: ${JUSTAUTH_ENABLED:true}
   type:
     GITHUB:
-      client-id: ??
-      client-secret: ??
-      redirect-uri: http://sso.test.com:8080/jeecg-boot/sys/thirdLogin/github/callback
+      client-id: ${JUSTAUTH_GITHUB_CLIENT_ID:??}
+      client-secret: ${JUSTAUTH_GITHUB_CLIENT_SECRET:??}
+      redirect-uri: "${JUSTAUTH_GITHUB_REDIRECT_URI:http://sso.test.com:8080/jeecg-boot/sys/thirdLogin/github/callback}"
     WECHAT_ENTERPRISE:
-      client-id: ??
-      client-secret: ??
-      redirect-uri: http://sso.test.com:8080/jeecg-boot/sys/thirdLogin/wechat_enterprise/callback
-      agent-id: 1000002
+      client-id: ${JUSTAUTH_WECHAT_ENTERPRISE_CLIENT_ID:??}
+      client-secret: ${JUSTAUTH_WECHAT_ENTERPRISE_CLIENT_SECRET:??}
+      redirect-uri: "${JUSTAUTH_WECHAT_ENTERPRISE_REDIRECT_URI:http://sso.test.com:8080/jeecg-boot/sys/thirdLogin/wechat_enterprise/callback}"
+      agent-id: ${JUSTAUTH_WECHAT_ENTERPRISE_AGENT_ID:1000002}
     DINGTALK:
-      client-id: ??
-      client-secret: ??
-      redirect-uri: http://sso.test.com:8080/jeecg-boot/sys/thirdLogin/dingtalk/callback
+      client-id: ${JUSTAUTH_DINGTALK_CLIENT_ID:??}
+      client-secret: ${JUSTAUTH_DINGTALK_CLIENT_SECRET:??}
+      redirect-uri: "${JUSTAUTH_DINGTALK_REDIRECT_URI:http://sso.test.com:8080/jeecg-boot/sys/thirdLogin/dingtalk/callback}"
     WECHAT_OPEN:
-      client-id: ??
-      client-secret: ??
-      redirect-uri: http://sso.test.com:8080/jeecg-boot/sys/thirdLogin/wechat_open/callback
+      client-id: ${JUSTAUTH_WECHAT_OPEN_CLIENT_ID:??}
+      client-secret: ${JUSTAUTH_WECHAT_OPEN_CLIENT_SECRET:??}
+      redirect-uri: "${JUSTAUTH_WECHAT_OPEN_REDIRECT_URI:http://sso.test.com:8080/jeecg-boot/sys/thirdLogin/wechat_open/callback}"
   cache:
     type: default
     prefix: 'demo::'

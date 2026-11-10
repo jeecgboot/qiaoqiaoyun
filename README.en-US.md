@@ -3,11 +3,11 @@ English  |  [中文](./README.zh-CN.md)
 QiaoQiaoYun AI No-Code Platform
 ===============
 
-Latest Version: 2.3.0 (Release Date: 2026-01-12) 
+Latest Version: 2.4.0 (Release Date: 2026-11-09) 
 
 
 [![](https://img.shields.io/badge/Author-Beijing%20Guoju%20Information%20Technology%20Co.%2C%20Ltd.-orange.svg)](https://www.guojusoft.com)
-[![](https://img.shields.io/badge/version-2.3.0-brightgreen.svg)](https://github.com/jeecgboot/qiaoqiaoyun)
+[![](https://img.shields.io/badge/version-2.4.0-brightgreen.svg)](https://github.com/jeecgboot/qiaoqiaoyun)
 [![GitHub stars](https://img.shields.io/github/stars/jeecgboot/qiaoqiaoyun.svg?style=social&label=Stars)](https://github.com/jeecgboot/qiaoqiaoyun)
 [![GitHub forks](https://img.shields.io/github/forks/jeecgboot/qiaoqiaoyun.svg?style=social&label=Fork)](https://github.com/jeecgboot/qiaoqiaoyun)
 [![](https://img.shields.io/badge/blog-Free%20Low--Code%20Platform-orange.svg)](https://jeecg.com/download)
@@ -101,6 +101,58 @@ Docker One-Click Installation
 -----------------------------------
 
 - Docker One-Click Cloud Deployment: https://help.qiaoqiaoyun.com/open/dockerCloud.html
+
+
+Mobile H5 Deployment
+-----------------------------------
+
+`qiaoqiaoyun_app_h5.zip` in the installation package is the H5 version of the mobile APP (static files only). It can be opened in mobile browsers, DingTalk and WeChat Work. Deploy the backend service first.
+
+**1. Unzip to the server**
+
+```bash
+mkdir -p /opt/qiaoqiaoyun-h5
+unzip qiaoqiaoyun_app_h5.zip -d /opt/qiaoqiaoyun-h5
+```
+
+**2. Set the backend API address**
+
+Edit `/opt/qiaoqiaoyun-h5/_app.config.js`. Set `API_BASE_URL` to your backend address and `SHARE_URL` to the H5 address:
+
+```js
+window._appConfig = {"API_BASE_URL":"http://<server-ip>","SHARE_URL":"http://<server-ip>:8051"};
+```
+
+**3. Configure Nginx**
+
+The H5 assets use root paths (`/static/...`), so it must be served on its own port or domain, not in a sub-directory:
+
+```nginx
+server {
+    listen       8051;
+    server_name  localhost;
+    root         /opt/qiaoqiaoyun-h5;
+    index        index.html;
+
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+}
+```
+
+Run `nginx -s reload`, then open `http://<server-ip>:8051` on your phone. The account and password are the same as the PC version.
+
+**4. Set the H5 address in the backend config**
+
+Edit the backend `config/application-prod.yml` and set `jeecg.domainUrl.app` to the H5 address (for Docker, pass the environment variable `JEECG_DOMAIN_URL_APP`), then restart the backend:
+
+```yaml
+jeecg:
+  domainUrl:
+    app: http://<server-ip>:8051
+```
+
+> Remember to open port 8051 in the firewall and cloud security group.
 
 
 

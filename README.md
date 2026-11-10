@@ -2,10 +2,10 @@
 
 # 敲敲云 AI零代码平台
 
-最新版本： 2.3.0（发布日期：2026-01-12）
+最新版本： 2.4.0（发布日期：2026-11-09）
 
 [![](https://img.shields.io/badge/Author-北京国炬信息技术有限公司-orange.svg)](https://www.guojusoft.com)
-[![](https://img.shields.io/badge/version-2.3.0-brightgreen.svg)](https://github.com/jeecgboot/qiaoqiaoyun)
+[![](https://img.shields.io/badge/version-2.4.0-brightgreen.svg)](https://github.com/jeecgboot/qiaoqiaoyun)
 [![GitHub stars](https://img.shields.io/github/stars/jeecgboot/qiaoqiaoyun.svg?style=social&label=Stars)](https://github.com/jeecgboot/qiaoqiaoyun)
 [![GitHub forks](https://img.shields.io/github/forks/jeecgboot/qiaoqiaoyun.svg?style=social&label=Fork)](https://github.com/jeecgboot/qiaoqiaoyun)
 [![](https://img.shields.io/badge/blog-免费低代码平台-orange.svg)](https://jeecg.com/download)
@@ -31,6 +31,7 @@
   - [一键命令安装（推荐）](#一键命令安装推荐)
   - [Docker 一键安装](#docker-一键安装)
   - [手动部署](#手动部署)
+  - [移动端 H5 部署](#移动端-h5-部署)
 - [敲敲云 Skills · AI 一句话搭建](#敲敲云-skills--ai-一句话搭建)
 - [核心特性](#核心特性)
 - [功能清单](#功能清单)
@@ -136,6 +137,56 @@ docker compose -f /opt/qiaoqiaoyun-docker/docker-compose.yml up -d
 ```
 
 > 详细步骤参考 [安装手册](https://help.qiaoqiaoyun.com/open/simpleStart.html)
+
+### 移动端 H5 部署
+
+部署包中的 `qiaoqiaoyun_app_h5.zip` 是移动端 APP 的 H5 版本（纯静态文件），手机浏览器、钉钉、企业微信里都可以直接访问。需要先按上面的方式把后端服务部署好。
+
+**1. 解压到服务器**
+
+```bash
+mkdir -p /opt/qiaoqiaoyun-h5
+unzip qiaoqiaoyun_app_h5.zip -d /opt/qiaoqiaoyun-h5
+```
+
+**2. 修改后端接口地址**
+
+编辑 `/opt/qiaoqiaoyun-h5/_app.config.js`，把 `API_BASE_URL` 改成你的后端地址，`SHARE_URL` 改成 H5 的访问地址：
+
+```js
+window._appConfig = {"API_BASE_URL":"http://<服务器IP>","SHARE_URL":"http://<服务器IP>:8051"};
+```
+
+**3. 配置 Nginx**
+
+H5 的资源用的是根路径（`/static/...`），必须单独占一个端口或域名，不能放在子目录下：
+
+```nginx
+server {
+    listen       8051;
+    server_name  localhost;
+    root         /opt/qiaoqiaoyun-h5;
+    index        index.html;
+
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+}
+```
+
+执行 `nginx -s reload` 后，用手机访问 `http://<服务器IP>:8051`，账号密码和 PC 端一样。
+
+**4. 修改后端配置中的 H5 地址**
+
+编辑后端 `config/application-prod.yml`，把 `jeecg.domainUrl.app` 改成 H5 的访问地址（Docker 部署可以直接传环境变量 `JEECG_DOMAIN_URL_APP`），然后重启后端：
+
+```yaml
+jeecg:
+  domainUrl:
+    app: http://<服务器IP>:8051
+```
+
+> 记得在防火墙和云安全组里放行 8051 端口。
 
 ---
 
