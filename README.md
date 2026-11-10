@@ -21,7 +21,7 @@
 
 **视频介绍**
 
-[![](./docs/images/qqyun-video-cover.png)](https://www.bilibili.com/video/BV1jUQeYfEM2)
+[![](./docs/images/qqyun-video-cover.png)](https://www.bilibili.com/video/BV1KHnM6XEDb/)
 
 ---
 
