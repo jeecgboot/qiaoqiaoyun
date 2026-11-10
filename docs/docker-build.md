@@ -13,13 +13,17 @@
 ├── docker-compose.yml              # 编排文件
 ├── qiaoqiaoyun-start-2.4.0.jar     # 后端程序
 ├── qiaoqiaoyun.sql                 # 数据库初始化脚本（MySQL 首次启动时自动导入）
+├── qiaoqiaoyun_app_h5.zip          # 移动端 H5 静态包（打进 H5 镜像）
 └── docker
     ├── Dockerfile.javax            # 后端镜像
+    ├── Dockerfile.h5               # 移动端 H5 镜像（nginx）
     ├── Dockerfile.mysql            # MySQL 镜像（内置初始化脚本）
     ├── Dockerfile.mongo            # MongoDB 镜像（内置建用户脚本）
     └── config
         ├── application-prod.yml    # 后端配置（打进后端镜像）
-        └── init-mongo.js           # MongoDB 初始化脚本
+        ├── init-mongo.js           # MongoDB 初始化脚本
+        ├── nginx-h5.conf           # H5 的 nginx 配置
+        └── h5-config.sh            # H5 启动时按环境变量生成 _app.config.js
 ```
 
 ## 构建并启动
@@ -45,11 +49,14 @@ docker logs -f qiaoqiaoyun-system    # 出现 Application QiaoQiaoYun is running
 
 访问 `http://localhost`，账号 `admin`，密码 `123456`。
 
+移动端 H5 会一起启动，用手机访问 `http://<服务器IP>:8051`，账号密码和 PC 端一样。
+
 ## 镜像与端口
 
 | 服务 | 镜像 | 宿主机端口 |
 |------|------|-----------|
 | qiaoqiaoyun-system | registry.cn-hangzhou.aliyuncs.com/jeecgdocker/qiaoqiaoyun-system:2.4.0 | 80 |
+| qiaoqiaoyun-h5 | registry.cn-hangzhou.aliyuncs.com/jeecgdocker/qiaoqiaoyun-h5:2.4.0 | 8051 |
 | qiaoqiaoyun-mysql | registry.cn-hangzhou.aliyuncs.com/jeecgdocker/qiaoqiaoyun-mysql:2.4.0 | 13306 |
 | qiaoqiaoyun-mongo | registry.cn-hangzhou.aliyuncs.com/jeecgdocker/qiaoqiaoyun-mongo:2.4.0 | 17017 |
 | qiaoqiaoyun-redis | registry.cn-hangzhou.aliyuncs.com/jeecgdocker/redis:5.0 | 不对外暴露 |
@@ -74,6 +81,16 @@ docker logs -f qiaoqiaoyun-system    # 出现 Application QiaoQiaoYun is running
 ```
 
 然后执行 `docker-compose -p qiaoqiaoyun_start up -d` 生效。全部参数见 [参数说明](https://help.qiaoqiaoyun.com/open/docker.html)。
+
+移动端 H5 默认请求「访问 H5 时用的主机 + 80 端口」上的后端，后端用默认 80 端口时不需要配置。后端换了端口、用了域名或 HTTPS 时，在 `qiaoqiaoyun-h5` 下传环境变量：
+
+```yaml
+  qiaoqiaoyun-h5:
+    ...
+    environment:
+      API_BASE_URL: https://api.example.com     # 后端接口地址
+      SHARE_URL: https://app.example.com        # H5 访问地址（分享链接用）
+```
 
 **方式二：改配置文件（需要重新构建）**
 
@@ -105,3 +122,5 @@ docker-compose -p qiaoqiaoyun_start up -d --build
 - **数据保存在数据卷里**：MySQL、MongoDB 的数据存放在 Docker 数据卷中，`down`、重建容器都不会丢数据。也因为这样，`qiaoqiaoyun.sql` 和 `init-mongo.js` 只在第一次启动时执行，之后修改它们不会生效；需要重新初始化时用 `down -v`。
 - **后端固定使用 prod 配置**：后端镜像设置了 `SPRING_PROFILES_ACTIVE=prod`，读取的是 `docker/config/application-prod.yml`。
 - **升级 jar 版本**：替换 jar 后，要同步修改 `docker/Dockerfile.javax` 里的 jar 文件名，以及 `docker-compose.yml` 里的镜像版本号。
+- **更新 H5**：替换 `qiaoqiaoyun_app_h5.zip` 后执行 `docker-compose -p qiaoqiaoyun_start up -d --build qiaoqiaoyun-h5`。
+- **H5 里的分享、消息跳转链接**：后端的 `JEECG_DOMAIN_URL_APP` 默认是 `http://localhost:8051`，部署到服务器后要改成 `http://<服务器IP>:8051`（见上面的「传环境变量」）。

@@ -1,0 +1,20 @@
+# 移动端 H5（qiaoqiaoyun_app_h5.zip）
+# 第一阶段：解压 zip（nginx 镜像里没有 unzip，借用后端基础镜像自带的 busybox unzip）
+FROM registry.cn-hangzhou.aliyuncs.com/jeecgdocker/alpine-java:8_server-jre_unlimited AS unpack
+COPY ./qiaoqiaoyun_app_h5.zip /tmp/h5.zip
+RUN mkdir -p /h5 && unzip -q /tmp/h5.zip -d /h5
+
+# 第二阶段：nginx 发布静态文件
+FROM registry.cn-hangzhou.aliyuncs.com/jeecgdocker/nginx:latest
+
+MAINTAINER jeecgos@163.com
+
+ENV TZ=Asia/Shanghai
+RUN ln -sf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+COPY --from=unpack /h5 /usr/share/nginx/html
+COPY ./docker/config/nginx-h5.conf /etc/nginx/conf.d/default.conf
+COPY ./docker/config/h5-config.sh /docker-entrypoint.d/40-qiaoqiaoyun-h5-config.sh
+RUN chmod +x /docker-entrypoint.d/40-qiaoqiaoyun-h5-config.sh
+
+EXPOSE 80

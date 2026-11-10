@@ -2,6 +2,8 @@
 
 部署包中的 `qiaoqiaoyun_app_h5.zip` 是移动端 APP 的 H5 版本（纯静态文件），手机浏览器、钉钉、企业微信里都可以直接访问。需要先把后端服务部署好（参考 [README 快速开始](../README.md#快速开始)）。
 
+> 用 [Docker 本地构建镜像](./docker-build.md) 部署的，H5 已经包含在 `docker-compose.yml` 里（`qiaoqiaoyun-h5` 服务，端口 8051），不需要再按下面的步骤手工部署。
+
 **1. 解压到服务器**
 
 ```bash

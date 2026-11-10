@@ -108,6 +108,8 @@ Mobile H5 Deployment
 
 `qiaoqiaoyun_app_h5.zip` in the installation package is the H5 version of the mobile APP (static files only). It can be opened in mobile browsers, DingTalk and WeChat Work. Deploy the backend service first.
 
+> If you deploy with the local Docker build (`docker-compose.yml`), H5 is already included as the `qiaoqiaoyun-h5` service on port 8051 (`http://<server-IP>:8051`), so the manual steps below are not needed. If the backend is not on port 80 of the same host, set `API_BASE_URL` / `SHARE_URL` in the `environment` of `qiaoqiaoyun-h5`.
+
 **1. Unzip to the server**
 
 ```bash

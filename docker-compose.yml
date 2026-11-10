@@ -70,6 +70,24 @@ services:
     networks:
       - qiaoqiaoyun
 
+  # 移动端 H5，访问 http://<服务器IP>:8051
+  qiaoqiaoyun-h5:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.h5
+    restart: always
+    container_name: qiaoqiaoyun-h5
+    image: registry.cn-hangzhou.aliyuncs.com/jeecgdocker/qiaoqiaoyun-h5:2.4.0
+    # environment:
+    #   API_BASE_URL: http://<服务器IP>        # 后端地址，不填默认为「访问 H5 的主机:80」
+    #   SHARE_URL: http://<服务器IP>:8051      # H5 访问地址，不填默认为当前访问地址
+    depends_on:
+      - qiaoqiaoyun-system
+    ports:
+      - 8051:80
+    networks:
+      - qiaoqiaoyun
+
 networks:
   qiaoqiaoyun:
     name: qiaoqiaoyun

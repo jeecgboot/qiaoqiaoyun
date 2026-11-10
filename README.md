@@ -153,7 +153,7 @@ docker-compose -p qiaoqiaoyun_start up -d
 
 ### 移动端 H5 部署
 
-部署包中的 `qiaoqiaoyun_app_h5.zip` 是移动端 H5 版本，解压后用 Nginx 发布即可在手机浏览器、钉钉、企业微信中访问。详见 [移动端 H5 部署](./docs/h5-deploy.md)。
+部署包中的 `qiaoqiaoyun_app_h5.zip` 是移动端 H5 版本，解压后用 Nginx 发布即可在手机浏览器、钉钉、企业微信中访问。用「Docker 本地构建镜像」方式部署时会自动安装 H5，访问 `http://<服务器IP>:8051` 即可。详见 [移动端 H5 部署](./docs/h5-deploy.md)。
 
 ---
 
