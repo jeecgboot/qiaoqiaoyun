@@ -3,6 +3,7 @@
 除了拖拽搭建，敲敲云还官方开源了 **Claude Code Skills** —— 在终端里用**一句话**让 AI 直接搭建 **应用 · 工作表 · 简流 · 仪表盘**，告别拖拉拽。
 
 > 🏠 官网专题页（安装演示 · 提示词库）：<https://www.qiaoqiaoyun.com/skills>
+> 🎬 演示视频：<https://www.qiaoqiaoyun.com/skillVideos>
 > 📦 Skills 仓库：[gitee.com/jeecg/qqyun-skills](https://gitee.com/jeecg/qqyun-skills)（国内推荐）· [GitHub](https://github.com/jeecgboot/qqyun-skills)
 
 ## 安装 Skills（两步）
