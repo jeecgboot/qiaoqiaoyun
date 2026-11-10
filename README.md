@@ -1,4 +1,4 @@
-中文 | [English](./README.md)
+中文 | [English](./README.en-US.md)
 
 # 敲敲云 AI零代码平台
 
@@ -30,6 +30,7 @@
 - [快速开始](#快速开始)
   - [一键命令安装（推荐）](#一键命令安装推荐)
   - [Docker 一键安装](#docker-一键安装)
+  - [Docker 本地构建镜像](#docker-本地构建镜像)
   - [手动部署](#手动部署)
   - [移动端 H5 部署](#移动端-h5-部署)
 - [敲敲云 Skills · AI 一句话搭建](#敲敲云-skills--ai-一句话搭建)
@@ -124,6 +125,16 @@ docker compose -f /opt/qiaoqiaoyun-docker/docker-compose.yml up -d
 
 > 如自动化脚本安装不成功，可参考 [Docker 手工部署文档](https://help.qiaoqiaoyun.com/open/dockerCloud.html)，通过 Docker Compose 手动完成部署。
 
+### Docker 本地构建镜像
+
+需要自定义配置、或想自己打包镜像时，在项目根目录执行：
+
+```bash
+docker-compose -p qiaoqiaoyun_start up -d
+```
+
+> 镜像构建、端口、传参、常用命令等详见 [Docker 本地构建镜像部署](./docs/docker-build.md)
+
 ### 手动部署
 
 下载部署包：[百度网盘](https://pan.baidu.com/s/141_ugZIGfuiDw3t6GvyR1Q?pwd=gdkq) | [GitHub Release](https://github.com/jeecgboot/qiaoqiaoyun/releases)
@@ -140,131 +151,20 @@ docker compose -f /opt/qiaoqiaoyun-docker/docker-compose.yml up -d
 
 ### 移动端 H5 部署
 
-部署包中的 `qiaoqiaoyun_app_h5.zip` 是移动端 APP 的 H5 版本（纯静态文件），手机浏览器、钉钉、企业微信里都可以直接访问。需要先按上面的方式把后端服务部署好。
-
-**1. 解压到服务器**
-
-```bash
-mkdir -p /opt/qiaoqiaoyun-h5
-unzip qiaoqiaoyun_app_h5.zip -d /opt/qiaoqiaoyun-h5
-```
-
-**2. 修改后端接口地址**
-
-编辑 `/opt/qiaoqiaoyun-h5/_app.config.js`，把 `API_BASE_URL` 改成你的后端地址，`SHARE_URL` 改成 H5 的访问地址：
-
-```js
-window._appConfig = {"API_BASE_URL":"http://<服务器IP>","SHARE_URL":"http://<服务器IP>:8051"};
-```
-
-**3. 配置 Nginx**
-
-H5 的资源用的是根路径（`/static/...`），必须单独占一个端口或域名，不能放在子目录下：
-
-```nginx
-server {
-    listen       8051;
-    server_name  localhost;
-    root         /opt/qiaoqiaoyun-h5;
-    index        index.html;
-
-    location / {
-        try_files $uri $uri/ /index.html;
-    }
-}
-```
-
-执行 `nginx -s reload` 后，用手机访问 `http://<服务器IP>:8051`，账号密码和 PC 端一样。
-
-**4. 修改后端配置中的 H5 地址**
-
-编辑后端 `config/application-prod.yml`，把 `jeecg.domainUrl.app` 改成 H5 的访问地址（Docker 部署可以直接传环境变量 `JEECG_DOMAIN_URL_APP`），然后重启后端：
-
-```yaml
-jeecg:
-  domainUrl:
-    app: http://<服务器IP>:8051
-```
-
-> 记得在防火墙和云安全组里放行 8051 端口。
+部署包中的 `qiaoqiaoyun_app_h5.zip` 是移动端 H5 版本，解压后用 Nginx 发布即可在手机浏览器、钉钉、企业微信中访问。详见 [移动端 H5 部署](./docs/h5-deploy.md)。
 
 ---
 
 ## 敲敲云 Skills · AI 一句话搭建
 
-除了拖拽搭建，敲敲云还官方开源了 **Claude Code Skills** —— 在终端里用**一句话**让 AI 直接搭建 **应用 · 工作表 · 简流 · 仪表盘**，告别拖拉拽。
-
-> 🏠 官网专题页（安装演示 · 提示词库）：<https://www.qiaoqiaoyun.com/skills>
-> 📦 Skills 仓库：[gitee.com/jeecg/qqyun-skills](https://gitee.com/jeecg/qqyun-skills)（国内推荐）· [GitHub](https://github.com/jeecgboot/qqyun-skills)
-
-### 安装 Skills（两步）
-
-**第 1 步 · 一行命令装齐 Claude Code 环境（推荐 · 无需翻墙）**
-
-```powershell
-# Windows（PowerShell）
-irm https://www.qiaoqiaoyun.com/claude/boot.ps1 | iex
-```
-
-```bash
-# macOS / Linux
-curl -fsSL https://www.qiaoqiaoyun.com/claude/install-claude-code.sh | bash
-```
-
-> ⚠️ 脚本写入 DeepSeek 作为模型后端（按 token 计费，[需自备 API Key](https://platform.deepseek.com/api_keys)）
-
-**第 2 步 · 安装敲敲云 Skills**
-
-```bash
-# macOS / Linux
-git clone https://gitee.com/jeecg/qqyun-skills.git
-cp -r qqyun-skills/jeecg-lowcode-* ~/.claude/skills/
-```
-
-```powershell
-# Windows（PowerShell）
-git clone https://gitee.com/jeecg/qqyun-skills.git
-Copy-Item qqyun-skills\jeecg-lowcode-* $env:USERPROFILE\.claude\skills\ -Recurse -Force
-```
-
-> 已有 Claude Code 可跳过第 1 步；需确保 **Python 3.12+** 可用（Skills 通过 Python 脚本调用敲敲云 API）。
-
-### 一句话开始
-
-```bash
-claude
-```
-
-```text
-> 在敲敲云租户【北京敲敲云科技有限公司】的应用【OA办公】下建工作表「请假申请」：
-  姓名（选择用户，必填，标题）、请假类型（下拉单选：事假/病假/年假/调休）、
-  开始日期、结束日期、请假天数（整数，必填）、请假原因（多行文本）、附件（附件上传）。
-```
-
-同一句话同时要「应用 + 工作表 + 简流 + 仪表盘」时，三个 Skill 自动协同，一次交付完整应用：
+除了拖拽搭建，敲敲云还官方开源了 **Claude Code Skills** —— 在终端里用**一句话**让 AI 直接搭建 **应用 · 工作表 · 简流 · 仪表盘**，私有化部署的环境同样可用。
 
 ```text
 > 在「行政管理」应用里做一个请假管理：请假表单（申请人、请假类型、起止日期、天数、事由、附件），
-  提交后走直属上级审批，审批通过状态改为"已通过"，
-  再来一个请假统计看板：按类型分布饼图 + 按月趋势折线图。
+  提交后走直属上级审批，再来一个请假统计看板：按类型分布饼图 + 按月趋势折线图。
 ```
 
-### 提示词写法要点
-
-- 两种触发写法**等价、二选一**：`使用 /jeecg-lowcode-lowapp ……` 或 `在敲敲云租户【xx】的应用【xx】下，……`
-- 必须写 **租户 + 应用** 两级上下文；应用不存在时直接说「创建一个应用【xxx】」
-- 字段用「**中文名 + 控件类型 + 关键属性**」描述（如：请假天数（整数，必填）），不要写 JSON
-- 更多实战提示词（含 30 张工作表 + 12 条简流的人事OA整套系统）见[官网专题页](https://www.qiaoqiaoyun.com/skills)
-
-### 连接私有化部署环境
-
-Skills 通过敲敲云 API 工作，**本仓库自建的环境同样可用** —— 在 Claude Code 会话中按 AI 提示提供：
-
-| 信息 | 获取方式 |
-|------|----------|
-| API 地址 | 本仓库部署的服务地址，如 `http://<服务器IP>` |
-| X-Access-Token | 登录敲敲云 → F12 → Network → 任意请求的 Request Headers |
-| 租户 / 应用 | 组织名称 / 应用名称（必填的两级上下文） |
+> 📖 安装与使用：[敲敲云 Skills 使用说明](./docs/skills.md) · 🏠 [官网专题页](https://www.qiaoqiaoyun.com/skills) · 📦 [Gitee](https://gitee.com/jeecg/qqyun-skills) / [GitHub](https://github.com/jeecgboot/qqyun-skills)
 
 ---
 
@@ -323,47 +223,7 @@ Skills 通过敲敲云 API 工作，**本仓库自建的环境同样可用** —
 
 ## 高级功能说明
 
-### 关联记录与工作流应用实践
-
-敲敲云平台提供了强大的**关联记录控件**、**计算控件**、**函数表达式**和**工作流引擎**，可以构建智能化的业务系统。
-
-#### 核心技术组件
-
-- **关联记录控件**：实现跨表数据关联，避免重复录入
-- **计算控件**：字段自动计算，减少人为错误
-- **函数表达式**：复杂逻辑判断和数据处理
-- **工作流引擎**：驱动业务自动化流转
-
-#### 典型应用场景
-
-**场景一：采购单自动生成应收款单**
-```
-采购单（关联供应商/产品） → 自动计算金额 → 工作流触发 → 自动生成应收款单
-```
-
-**场景二：入库单自动更新库存**
-```
-入库单（关联产品） → 计算入库数量 → 工作流触发 → 自动更新库存数量
-```
-
-#### 工作流节点说明
-
-| 节点类型 | 功能说明 | 使用场景 |
-|----------|----------|----------|
-| 增（Create） | 新建记录 | 自动生成单据、创建库存记录 |
-| 查（Query） | 查询数据 | 检查数据存在性、获取基础信息 |
-| 改（Update） | 更新记录 | 库存累加、状态更新 |
-| 循环（Loop） | 批量处理 | 遍历明细行、批量操作 |
-
-#### 业务价值
-
-- 🔗 **数据互联**：打破信息孤岛，实现数据自动关联
-- 🤖 **自动计算**：减少手工错误，提高数据准确性
-- ⚡ **流程自动化**：消除重复操作，提升业务效率
-- 📊 **实时更新**：库存、财务数据实时同步
-- 🔄 **业务闭环**：完整的自动化业务流程
-
-> 📋 详细的实践指南请参考 [关联记录与工作流应用.md](./关联记录与工作流应用.md)
+- [关联记录与工作流应用实践](./关联记录与工作流应用.md)：用关联记录、计算控件、函数表达式和工作流，实现采购单自动生成应收款单、入库单自动更新库存等业务自动化。
 
 ---
 

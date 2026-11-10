@@ -2,5 +2,6 @@
 FROM registry.cn-hangzhou.aliyuncs.com/jeecgdocker/mongo AS mongo
 
 COPY ./docker/config/init-mongo.js /docker-entrypoint-initdb.d/
+RUN chmod 644 /docker-entrypoint-initdb.d/init-mongo.js
 
 CMD ["mongod"]
