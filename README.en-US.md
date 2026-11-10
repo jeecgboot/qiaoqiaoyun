@@ -211,6 +211,8 @@ Technical Communication
 
 [![](./docs/images/qqyun-video-cover.png)](https://www.bilibili.com/video/BV1KHnM6XEDb/)
 
+🤖 [AI One-Sentence Build Videos](https://www.qiaoqiaoyun.com/skillVideos) · 🛠️ [Manual Configuration Tutorials](https://www.qiaoqiaoyun.com/learnIndex)
+
 
 
 QiaoQiaoYun Typical Application Scenarios

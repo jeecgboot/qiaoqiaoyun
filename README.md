@@ -23,6 +23,8 @@
 
 [![](./docs/images/qqyun-video-cover.png)](https://www.bilibili.com/video/BV1KHnM6XEDb/)
 
+🤖 [AI 一句话搭建视频](https://www.qiaoqiaoyun.com/skillVideos) · 🛠️ [手工配置教学视频](https://www.qiaoqiaoyun.com/learnIndex)
+
 ---
 
 ## 目录
