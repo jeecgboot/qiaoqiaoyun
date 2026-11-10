@@ -3,7 +3,7 @@ English  |  [中文](./README.zh-CN.md)
 QiaoQiaoYun AI No-Code Platform
 ===============
 
-Latest Version: 2.4.0 (Release Date: 2026-11-09) 
+Latest Version: 2.4.0 (Release Date: 2026-11-10) 
 
 
 [![](https://img.shields.io/badge/Author-Beijing%20Guoju%20Information%20Technology%20Co.%2C%20Ltd.-orange.svg)](https://www.guojusoft.com)

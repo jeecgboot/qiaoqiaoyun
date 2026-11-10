@@ -2,7 +2,7 @@
 
 # 敲敲云 AI零代码平台
 
-最新版本： 2.4.0（发布日期：2026-11-09）
+最新版本： 2.4.0（发布日期：2026-11-10）
 
 [![](https://img.shields.io/badge/Author-北京国炬信息技术有限公司-orange.svg)](https://www.guojusoft.com)
 [![](https://img.shields.io/badge/version-2.4.0-brightgreen.svg)](https://github.com/jeecgboot/qiaoqiaoyun)
