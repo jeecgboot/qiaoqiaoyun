@@ -21,7 +21,7 @@
 
 **视频介绍**
 
-[![](https://upload.jeecg.com/jeecg/qiaoqiaoyunsite/qqyunvideo.png)](https://www.bilibili.com/video/BV1jUQeYfEM2)
+[![](./docs/images/qqyun-video-cover.png)](https://www.bilibili.com/video/BV1jUQeYfEM2)
 
 ---
 
